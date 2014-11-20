@@ -13,6 +13,10 @@
 	<?php echo CHtml::encode($data->blog_id); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('content')); ?>:</b>
+	<?php echo CHtml::encode($data->content); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date')); ?>:</b>
 	<?php echo CHtml::encode($data->date); ?>
 	<br />

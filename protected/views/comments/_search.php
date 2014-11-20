@@ -22,6 +22,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'content'); ?>
+		<?php echo $form->textField($model,'content',array('size'=>60,'maxlength'=>2000)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'date'); ?>
 		<?php echo $form->textField($model,'date'); ?>
 	</div>

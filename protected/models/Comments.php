@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'comments':
  * @property integer $id
  * @property integer $blog_id
+ * @property string $content
  * @property string $date
  * @property string $time
  * @property string $user
@@ -32,12 +33,13 @@ class Comments extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, blog_id, date, time, user', 'required'),
+			array('id, blog_id, content, date, time, user', 'required'),
 			array('id, blog_id', 'numerical', 'integerOnly'=>true),
+			array('content', 'length', 'max'=>2000),
 			array('user', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, blog_id, date, time, user', 'safe', 'on'=>'search'),
+			array('id, blog_id, content, date, time, user', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,6 +64,7 @@ class Comments extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'blog_id' => 'Blog',
+			'content' => 'Content',
 			'date' => 'Date',
 			'time' => 'Time',
 			'user' => 'User',
@@ -88,6 +91,7 @@ class Comments extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('blog_id',$this->blog_id);
+		$criteria->compare('content',$this->content,true);
 		$criteria->compare('date',$this->date,true);
 		$criteria->compare('time',$this->time,true);
 		$criteria->compare('user',$this->user,true);

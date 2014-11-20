@@ -23,6 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'blog_id',
+		'content',
 		'date',
 		'time',
 		'user',
