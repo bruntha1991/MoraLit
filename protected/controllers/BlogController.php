@@ -71,7 +71,7 @@ class BlogController extends Controller
 		{
 			$model->attributes=$_POST['Blog'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->blog_id));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class BlogController extends Controller
 		{
 			$model->attributes=$_POST['Blog'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->blog_id));
 		}
 
 		$this->render('update',array(

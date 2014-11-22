@@ -71,7 +71,7 @@ class SubEventController extends Controller
 		{
 			$model->attributes=$_POST['SubEvent'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->sub_event_id));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class SubEventController extends Controller
 		{
 			$model->attributes=$_POST['SubEvent'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->sub_event_id));
 		}
 
 		$this->render('update',array(

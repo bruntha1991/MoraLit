@@ -4,7 +4,7 @@
  * This is the model class for table "event".
  *
  * The followings are the available columns in table 'event':
- * @property integer $id
+ * @property integer $event_id
  * @property string $name
  * @property string $date
  * @property string $time
@@ -32,13 +32,13 @@ class Event extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, name, date, time, description', 'required'),
-			array('id', 'numerical', 'integerOnly'=>true),
-			array('name, image', 'length', 'max'=>45),
-			array('description', 'length', 'max'=>1000),
+			array('event_id, name, date, time, description', 'required'),
+			array('event_id', 'numerical', 'integerOnly'=>true),
+			array('name', 'length', 'max'=>100),
+			array('image', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, date, time, image, description', 'safe', 'on'=>'search'),
+			array('event_id, name, date, time, image, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,7 +60,7 @@ class Event extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
+			'event_id' => 'Event',
 			'name' => 'Name',
 			'date' => 'Date',
 			'time' => 'Time',
@@ -87,7 +87,7 @@ class Event extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('event_id',$this->event_id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('date',$this->date,true);
 		$criteria->compare('time',$this->time,true);

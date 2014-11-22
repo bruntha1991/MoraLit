@@ -4,7 +4,7 @@
  * This is the model class for table "crew".
  *
  * The followings are the available columns in table 'crew':
- * @property string $id
+ * @property string $crew_id
  * @property string $first_name
  * @property string $last_name
  * @property string $faculty
@@ -32,13 +32,13 @@ class Crew extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, first_name, last_name, faculty, year, designation, contact_no, email', 'required'),
-			array('id, contact_no', 'length', 'max'=>10),
+			array('crew_id, first_name, last_name, faculty, year, designation, contact_no, email', 'required'),
+			array('crew_id, contact_no', 'length', 'max'=>10),
 			array('first_name, last_name, faculty, designation, email, image', 'length', 'max'=>45),
 			array('year', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, first_name, last_name, faculty, year, designation, contact_no, email, image', 'safe', 'on'=>'search'),
+			array('crew_id, first_name, last_name, faculty, year, designation, contact_no, email, image', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,7 +59,7 @@ class Crew extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
+			'crew_id' => 'Crew',
 			'first_name' => 'First Name',
 			'last_name' => 'Last Name',
 			'faculty' => 'Faculty',
@@ -89,7 +89,7 @@ class Crew extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
+		$criteria->compare('crew_id',$this->crew_id,true);
 		$criteria->compare('first_name',$this->first_name,true);
 		$criteria->compare('last_name',$this->last_name,true);
 		$criteria->compare('faculty',$this->faculty,true);

@@ -71,7 +71,7 @@ class CrewController extends Controller
 		{
 			$model->attributes=$_POST['Crew'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->crew_id));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class CrewController extends Controller
 		{
 			$model->attributes=$_POST['Crew'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->crew_id));
 		}
 
 		$this->render('update',array(

@@ -4,18 +4,18 @@
 
 $this->breadcrumbs=array(
 	'Events'=>array('index'),
-	$model->name=>array('view','id'=>$model->id),
+	$model->name=>array('view','id'=>$model->event_id),
 	'Update',
 );
 
 $this->menu=array(
 	array('label'=>'List Event', 'url'=>array('index')),
 	array('label'=>'Create Event', 'url'=>array('create')),
-	array('label'=>'View Event', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'View Event', 'url'=>array('view', 'id'=>$model->event_id)),
 	array('label'=>'Manage Event', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Event <?php echo $model->id; ?></h1>
+<h1>Update Event <?php echo $model->event_id; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

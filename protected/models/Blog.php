@@ -4,16 +4,18 @@
  * This is the model class for table "blog".
  *
  * The followings are the available columns in table 'blog':
- * @property integer $id
+ * @property integer $blog_id
  * @property string $title
- * @property string $author
+ * @property integer $user_id
  * @property string $content
- * @property string $uploaded
+ * @property string $date
+ * @property string $time
  * @property string $image
+ * @property string $no_of_views
  *
  * The followings are the available model relations:
- * @property Authors $author0
- * @property Comments[] $comments
+ * @property Comment[] $comments
+ * @property Like[] $likes
  */
 class Blog extends CActiveRecord
 {
@@ -33,13 +35,14 @@ class Blog extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, title, author, content, uploaded, image', 'required'),
-			array('id', 'numerical', 'integerOnly'=>true),
-			array('title, author, image', 'length', 'max'=>45),
-			array('content', 'length', 'max'=>4000),
+			array('blog_id, title, user_id, content, date, time, image, no_of_views', 'required'),
+			array('blog_id, user_id', 'numerical', 'integerOnly'=>true),
+			array('title', 'length', 'max'=>100),
+			array('image', 'length', 'max'=>45),
+			array('no_of_views', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, title, author, content, uploaded, image', 'safe', 'on'=>'search'),
+			array('blog_id, title, user_id, content, date, time, image, no_of_views', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,8 +54,8 @@ class Blog extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'author0' => array(self::BELONGS_TO, 'Authors', 'author'),
-			'comments' => array(self::HAS_MANY, 'Comments', 'blog_id'),
+			'comments' => array(self::HAS_MANY, 'Comment', 'blog_id'),
+			'likes' => array(self::HAS_MANY, 'Like', 'blog_id'),
 		);
 	}
 
@@ -62,12 +65,14 @@ class Blog extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
+			'blog_id' => 'Blog',
 			'title' => 'Title',
-			'author' => 'Author',
+			'user_id' => 'User',
 			'content' => 'Content',
-			'uploaded' => 'Uploaded',
+			'date' => 'Date',
+			'time' => 'Time',
 			'image' => 'Image',
+			'no_of_views' => 'No Of Views',
 		);
 	}
 
@@ -89,12 +94,14 @@ class Blog extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('blog_id',$this->blog_id);
 		$criteria->compare('title',$this->title,true);
-		$criteria->compare('author',$this->author,true);
+		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('content',$this->content,true);
-		$criteria->compare('uploaded',$this->uploaded,true);
+		$criteria->compare('date',$this->date,true);
+		$criteria->compare('time',$this->time,true);
 		$criteria->compare('image',$this->image,true);
+		$criteria->compare('no_of_views',$this->no_of_views,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

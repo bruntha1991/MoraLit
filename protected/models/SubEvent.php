@@ -4,7 +4,7 @@
  * This is the model class for table "sub_event".
  *
  * The followings are the available columns in table 'sub_event':
- * @property integer $id
+ * @property integer $sub_event_id
  * @property integer $event_id
  * @property string $name
  * @property string $date
@@ -13,7 +13,7 @@
  * @property string $image
  *
  * The followings are the available model relations:
- * @property Photos[] $photoses
+ * @property Photo[] $photos
  * @property Event $event
  */
 class SubEvent extends CActiveRecord
@@ -34,13 +34,13 @@ class SubEvent extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, event_id, name, date, time, description, image', 'required'),
-			array('id, event_id', 'numerical', 'integerOnly'=>true),
-			array('name, image', 'length', 'max'=>45),
-			array('description', 'length', 'max'=>1000),
+			array('sub_event_id, event_id, name, date, time, description, image', 'required'),
+			array('sub_event_id, event_id', 'numerical', 'integerOnly'=>true),
+			array('name', 'length', 'max'=>100),
+			array('image', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, event_id, name, date, time, description, image', 'safe', 'on'=>'search'),
+			array('sub_event_id, event_id, name, date, time, description, image', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,7 +52,7 @@ class SubEvent extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'photoses' => array(self::HAS_MANY, 'Photos', 'sub_event_id'),
+			'photos' => array(self::HAS_MANY, 'Photo', 'sub_event_id'),
 			'event' => array(self::BELONGS_TO, 'Event', 'event_id'),
 		);
 	}
@@ -63,7 +63,7 @@ class SubEvent extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
+			'sub_event_id' => 'Sub Event',
 			'event_id' => 'Event',
 			'name' => 'Name',
 			'date' => 'Date',
@@ -91,7 +91,7 @@ class SubEvent extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('sub_event_id',$this->sub_event_id);
 		$criteria->compare('event_id',$this->event_id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('date',$this->date,true);
