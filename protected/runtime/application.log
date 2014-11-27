@@ -2033,3 +2033,128 @@ Stack trace:
 REQUEST_URI=/MoraLit/index.php?r=site/crew
 HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
 ---
+2014/11/23 15:55:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
+---
+2014/11/23 15:57:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
+---
+2014/11/23 16:04:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/html/MoraLit/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/html/MoraLit/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/html/MoraLit/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/MoraLit/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/html/MoraLit/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/html/MoraLit/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/html/MoraLit/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('blog/view')
+#10 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/MoraLit/index.php?r=blog/view
+---
+2014/11/23 17:46:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
+---
+2014/11/23 17:51:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php
+---
+2014/11/27 10:37:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
+---
+2014/11/27 10:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php
+---
+2014/11/27 10:40:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/site/viewAboutus".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/site/view...')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=admin/site/viewAboutus
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=admin
+---
+2014/11/27 10:41:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
+---
+2014/11/27 12:06:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
+---
+2014/11/27 12:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
+---
