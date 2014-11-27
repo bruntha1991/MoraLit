@@ -30,6 +30,7 @@
 
             <div id="header-spacing" class="row">  
                 <div class="span4" id="img_logo"> <img src="assets/img/logo.png" class="img-responsive" alt="Responsive image"> </div>
+                <div class="span8">
                 <div class="masthead clearfix">
                     <div class="inner">
                         <?php
