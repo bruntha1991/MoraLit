@@ -12,9 +12,14 @@ $this->menu=array(
 );
 ?>
 
-<h1>Crews</h1>
+
+<div class="container">
+
+    <div class="span8">
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
+    </div>
+</div>

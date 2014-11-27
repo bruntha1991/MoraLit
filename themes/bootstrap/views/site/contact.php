@@ -40,7 +40,7 @@
 
             <div class="control-group"><?php echo $form->textFieldRow($model, 'subject', array('size' => 60, 'maxlength' => 128)); ?></div>
 
-            <div class="control-group"><?php echo $form->textAreaRow($model, 'body', array('rows' => 6, 'class' => 'span8')); ?></div>
+            <div class="control-group"><?php echo $form->textAreaRow($model, 'body', array('rows' => 6, 'class' => 'span4')); ?></div>
 
             <div class="control-group"><?php if (CCaptcha::checkRequirements()): ?>
         <?php

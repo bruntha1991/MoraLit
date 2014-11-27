@@ -85,10 +85,15 @@ class SiteController extends Controller {
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
             // validate user input and redirect to the previous page if valid
-            if ($model->validate() && $model->login())
-                $this->redirect(Yii::app()->user->returnUrl);
+            if ($model->validate() && $model->login()) {
+                if (Yii::app()->user->isGuest) {
+                    $this->render('index');
+                } else if (User::model()->getType() == 'SUPERADMIN') {
+                    $this->redirect(array('/admin'));
+                } 
+            }
         }
-        // display the login form
+        // display the login form 
         $this->render('login', array('model' => $model));
     }
 
@@ -103,6 +108,9 @@ class SiteController extends Controller {
     public function actionViewAboutus() {
         $this->render('aboutus');
     }
-    
+
+    public function actionCrew() {
+        $this->render('/crew');
+    }
 
 }
