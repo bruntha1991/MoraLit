@@ -2,8 +2,19 @@
 
 class DefaultController extends Controller
 {
+    public $layout='/layouts/column1';
 	public function actionIndex()
 	{
-		$this->render('index');
+		if (Yii::app()->user->isGuest)
+                {
+                $this->redirect(Yii::app()->homeUrl.'?r=site/login');
+            }
+            else
+                {
+                $this->render('index');
+            }
 	}
+        
+        
+
 }

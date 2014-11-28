@@ -35,7 +35,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/boo
 
 
 ?>
-    <div class="span5">
+    <div class="span6">
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<div class="control-group">
@@ -69,18 +69,4 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/boo
 
 <?php $this->endWidget(); ?>
 
-<div class="span6"> 
-<div class="well">
-<h4 class="master_heading">Lorem ipsum dolor sit amet? </h4>
-
-<p> Access your online learning environment: <p/>
-<ul>
-	<li> Donec id elit non mi porta gravida at eget metus.</li>
-	<li> Sed ut perspiciatis unde omnis iste natus error sit  </li>
-	<li> t enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</li>
-</ul>
-
-
-</div>
-</div>
 </div>

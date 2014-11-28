@@ -2158,3 +2158,465 @@ Stack trace:
 REQUEST_URI=/MoraLit/index.php?r=site/crew
 HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
 ---
+2014/11/27 15:20:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
+---
+2014/11/27 15:23:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=user/create
+---
+2014/11/27 15:23:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
+---
+2014/11/27 15:25:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crew".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('crew')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=user/create
+---
+2014/11/27 15:26:30 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+---
+2014/11/27 15:39:24 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php
+---
+2014/11/27 15:39:40 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+---
+2014/11/27 15:39:43 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php
+---
+2014/11/27 15:40:39 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php
+---
+2014/11/27 15:41:07 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+HTTP_REFERER=http://localhost/MoraLit/index.php
+---
+2014/11/27 15:41:10 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+---
+2014/11/27 15:41:12 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+---
+2014/11/27 15:41:34 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+---
+2014/11/27 15:41:37 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+---
+2014/11/27 15:41:39 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+---
+2014/11/27 15:41:53 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+---
+2014/11/27 15:41:53 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+---
+2014/11/27 15:41:53 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/crew".' in /var/www/html/MoraLit/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(782): CController->renderPartial('/crew', NULL, true)
+#1 /var/www/html/MoraLit/protected/controllers/SiteController.php(109): CController->render('/crew')
+#2 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionCrew()
+#3 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('crew')
+#7 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crew')
+#8 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/crew
+---
+2014/11/27 15:42:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/html/MoraLit/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/html/MoraLit/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/html/MoraLit/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/MoraLit/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/html/MoraLit/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/html/MoraLit/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/html/MoraLit/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('crew/view')
+#10 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/MoraLit/index.php?r=crew/view
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/viewAboutus
+---
+2014/11/27 19:35:30 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (98)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 19:35:36 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (98)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 19:36:10 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (98)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 19:36:41 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (98)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 19:38:16 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (95)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 19:39:03 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (95)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 19:41:07 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (95)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 19:41:58 [error] [php] Array to string conversion (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (95)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 19:42:22 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (95)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 19:44:34 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (95)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 20:01:49 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (95)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 20:04:12 [error] [exception.CException] exception 'CException' with message 'Property "User.first_name" is not defined.' in /var/www/html/MoraLit/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/MoraLit/framework/db/ar/CActiveRecord.php(145): CComponent->__get('first_name')
+#1 /var/www/html/MoraLit/framework/base/CModel.php(596): CActiveRecord->__get('first_name')
+#2 /var/www/html/MoraLit/protected/components/UserIdentity.php(64): CModel->offsetGet('first_name')
+#3 /var/www/html/MoraLit/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#4 /var/www/html/MoraLit/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 /var/www/html/MoraLit/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 /var/www/html/MoraLit/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 /var/www/html/MoraLit/protected/controllers/SiteController.php(88): CModel->validate()
+#8 /var/www/html/MoraLit/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#9 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/MoraLit/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/MoraLit/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('login')
+#13 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/login
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=site/login
+---
+2014/11/27 20:06:08 [error] [php] Undefined offset: 0 (/var/www/html/MoraLit/protected/models/User.php:130)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=site/login
+in /var/www/html/MoraLit/protected/models/User.php (130)
+in /var/www/html/MoraLit/protected/controllers/SiteController.php (95)
+in /var/www/html/MoraLit/index.php (13)
+2014/11/27 20:06:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/view".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/view')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=admin/view
+---
