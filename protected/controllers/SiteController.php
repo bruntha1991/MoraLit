@@ -90,7 +90,9 @@ class SiteController extends Controller {
                     $this->render('index');
                 } else if (User::model()->getType() == 'SUPERADMIN') {
                     $this->redirect(array('/admin'));
-                } 
+                } else if (User::model()->getType() == 'AUTHOR') {
+                    $this->redirect(array('/admin'));
+                }                
             }
         }
         // display the login form 
