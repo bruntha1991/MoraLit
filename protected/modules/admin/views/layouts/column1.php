@@ -1,7 +1,5 @@
-<?php $this->beginContent('//layouts/main'); ?>
-
-    <div class="row-fluid">
+<?php $this->beginContent('/layouts/main'); ?>
+<div id="content">
 	<?php echo $content; ?>
-    </div>
-
+</div><!-- content -->
 <?php $this->endContent(); ?>

@@ -27,7 +27,7 @@
 
         <?php
         $this->widget('bootstrap.widgets.TbNavbar', array(
-            'brand' => 'LearnCIMA Dashboard',
+            'brand' => '<b>MoraLit Admin Dashboard</b>',
             'brandUrl' => array('/admin'),
             'type' => 'inverse',
             'collapse'=>true,
