@@ -1,59 +1,212 @@
 <?php /* @var $this Controller */ ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en" />
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="en" />
 
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/navbar-fixed-top.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/carousel.css" />
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/bootstrap-spinner.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/plugins/font-awesome/css/font-awesome.css" />
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-</head>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.spinner.min.js" type="text/javascript"></script>
 
-<body>
 
-<div class="container" id="page">
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap-modal.js" type="text/javascript"></script>
 
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+        <?php Yii::app()->bootstrap->register(); ?>
+    </head>
 
-	<?php echo $content; ?>
+    <body>
 
-	<div class="clear"></div>
 
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
+        <?php
+        $this->widget('bootstrap.widgets.TbNavbar', array(
+            'brand' => '<b>MoraLit Admin Dashboard</b>',
+            'brandUrl' => array('/admin'),
+            'type' => 'inverse',
+            'collapse'=>true,
+            'items' => array(
+                array(
+                    'class' => 'bootstrap.widgets.TbMenu',
+                    'items' => array(
+                        array('label' => 'Home', 'url' => array('/admin')),
+//                array('label'=>'About', 'url'=>array('#')),
+//                array('label'=>'Contact', 'url'=>array('#')),
+//                
+                      //  array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
+                        array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
+                    ),
+                ),
+            ),
+        ));
+        ?>
 
-</div><!-- page -->
 
-</body>
+
+        <?php //if(isset($this->breadcrumbs)):?>
+        <?php
+        //$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+        //'links'=>$this->breadcrumbs,
+        //)); 
+        ?><!-- breadcrumbs -->
+        <?php //endif ?>
+        <!--       <div class="row">
+          <div class="span4"> <img src="assets/img/logo.png" class="img-responsive" alt="Responsive image"> </div>
+          
+        </div>--><p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+
+        <?php
+        $route = '';
+        $route = Yii::app()->controller->id;
+
+        if ($route != 'default') {
+            ?>
+            <div class="span3"><br/><br/><br/><br/>
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+
+
+                        <!--                <li><a href="index.php?r=admin/course">Course Management</a></li>
+                                            <li><a href="index.php?r=admin/level">Level Management</a></li>-->
+                        <!--                    <li><a href="index.php?r=admin/subject">Subject Management</a></li>-->
+                        <!--                    <li><a href="index.php?r=admin/subjectArea">Subject-Area Management</a></li>-->
+                        <!--                    <li><a href="index.php?r=admin/sitting">Sitting Management</a></li>-->
+                        <!--                    <li><a href="index.php?r=admin/news">News Management</a></li>-->
+                        <!--                    <li><a href="index.php?r=admin/country">Country Management</a></li>-->
+
+                        <li <?php echo ($route == 'course') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Course Management', array('course/index')) ?>
+                        </li>
+
+                        <li <?php echo ($route == 'level') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Level Management', array('level/index')) ?>
+                        </li>
+
+                        <li <?php echo ($route == 'subject') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Subject Management', array('subject/index')) ?>
+                        </li>
+
+                        <li <?php echo ($route == 'subjectArea') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Subject-Area Management', array('subjectArea/index')) ?>
+                        </li>
+
+                        <li <?php echo ($route == 'sitting') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Sitting Management', array('sitting/index')) ?>
+                        </li>
+
+                        <li <?php echo ($route == 'news') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('News Management', array('news/index')) ?>
+                        </li>
+
+                        <li <?php echo ($route == 'country') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Country Management', array('country/index')) ?>
+                        </li>
+
+
+
+                    </ul>
+                </div><!--/.well -->
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+
+                        <!--                    <li /*class="active"*/><a href="index.php?r=admin/student">Student Management</a></li>-->
+                        <!--                    <li><a href="index.php?r=admin/lecturer">Lecturer Management</a></li>-->
+                        <!--                    <li><a href="index.php?r=admin/temporaryUser">Temporary Users</a></li>                    -->
+                        <!--                    <li><a href="index.php?r=admin/exam">Exam Management</a></li>-->
+                        <!--                    <li><a href="index.php?r=admin/question">Question Management</a></li>-->
+
+                        <!--                    <li><a href="index.php?r=admin/result">Result Management</a></li>-->
+
+                        <?php if ($route != 'studentExam') { ?>
+
+                            <li <?php echo ($route == 'student') ? 'class="active"' : '' ?>>
+                                <?php echo CHtml::link('Student Management', array('student/index')) ?>
+                            </li>
+
+                        <?php } else { ?>  
+                            <li <?php echo ($route == 'studentExam') ? 'class="active"' : '' ?>>
+                                <?php echo CHtml::link('Student Management', array('student/index')) ?>
+                            </li>
+
+                            <?php }
+                        ?>
+
+
+
+
+                        <li <?php echo ($route == 'lecturer') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Lecturer Management', array('lecturer/index')) ?>
+                        </li>
+
+                        <li <?php echo ($route == 'temporaryUser') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Temporary Users', array('temporaryUser/index')) ?>
+                        </li>
+
+                        <li <?php echo ($route == 'exam') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Exam Management', array('exam/index')) ?>
+                        </li>
+
+                        <li <?php echo ($route == 'question') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Question Management', array('question/index')) ?>
+                        </li>
+
+                        <li <?php echo ($route == 'result') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Result Management', array('result/index')) ?>
+                        </li>
+
+
+
+                    </ul>
+                </div><!--/.well -->
+            </div>
+        <?php } else { ?>
+
+            <div class="span2"></div>
+
+
+        <?php } ?>
+
+
+        <!--/span-->
+
+        <!--        <div class="container">-->
+
+
+        <?php echo $content; ?>
+
+        <div class="clear"></div>
+
+
+        <!--	<div id="footer">
+                        Copyright &copy; <?php //echo date('Y');             ?> by My Company.<br/>
+                        All Rights Reserved.<br/>
+        <?php //echo Yii::powered();  ?>
+                </div> footer -->
+
+        <!--</div> page -->
+        <p>&nbsp;</p>
+        <div class="clear"></div>
+
+        <footer>
+
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+        </footer>
+
+    </body>
 </html>

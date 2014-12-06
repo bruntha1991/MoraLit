@@ -35,8 +35,8 @@ class Blog extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('blog_id, title, user_id, content, date, time, image, no_of_views', 'required'),
-			array('blog_id, user_id', 'numerical', 'integerOnly'=>true),
+			array('title, user_id, content, date, time, image, no_of_views', 'required'),
+			array('user_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>100),
 			array('image', 'length', 'max'=>45),
 			array('no_of_views', 'length', 'max'=>10),

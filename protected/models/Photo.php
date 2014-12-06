@@ -29,8 +29,8 @@ class Photo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('photo_id, sub_event_id, image', 'required'),
-			array('photo_id, sub_event_id', 'numerical', 'integerOnly'=>true),
+			array('sub_event_id, image', 'required'),
+			array('sub_event_id', 'numerical', 'integerOnly'=>true),
 			array('image', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
