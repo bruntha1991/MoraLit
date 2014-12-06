@@ -20,12 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'comment_id'); ?>
-		<?php echo $form->textField($model,'comment_id'); ?>
-		<?php echo $form->error($model,'comment_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'blog_id'); ?>
 		<?php echo $form->textField($model,'blog_id'); ?>
 		<?php echo $form->error($model,'blog_id'); ?>
