@@ -52,6 +52,4 @@ $this->breadcrumbs = array(
     <div class="span12">
         <hr class="hrstyle">
     </div>
-
-   
 </div>  
