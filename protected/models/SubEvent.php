@@ -34,8 +34,8 @@ class SubEvent extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('sub_event_id, event_id, name, date, time, description, image', 'required'),
-			array('sub_event_id, event_id', 'numerical', 'integerOnly'=>true),
+			array('event_id, name, date, time, description, image', 'required'),
+			array('event_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>100),
 			array('image', 'length', 'max'=>45),
 			// The following rule is used by search().
