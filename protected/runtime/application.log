@@ -2620,3 +2620,20 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/MoraLit/index.php?r=admin/view
 ---
+2014/11/29 12:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/site/contact".' in C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/site/cont...')
+#1 C:\xampp\htdocs\MoraLit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\MoraLit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/moralit/index.php?r=admin/site/contact
+HTTP_REFERER=http://localhost/moralit/index.php?r=admin/crew
+---
+2014/11/29 12:45:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/site/contact".' in C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/site/cont...')
+#1 C:\xampp\htdocs\MoraLit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\MoraLit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/moralit/index.php?r=admin/site/contact
+---
