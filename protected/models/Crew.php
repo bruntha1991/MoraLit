@@ -32,10 +32,10 @@ class Crew extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('crew_id, first_name, last_name, faculty, year, designation, contact_no, email', 'required'),
-			array('crew_id, contact_no', 'length', 'max'=>10),
+			array('first_name, last_name, faculty, year, designation, contact_no, email', 'required'),
 			array('first_name, last_name, faculty, designation, email, image', 'length', 'max'=>45),
 			array('year', 'length', 'max'=>4),
+			array('contact_no', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('crew_id, first_name, last_name, faculty, year, designation, contact_no, email, image', 'safe', 'on'=>'search'),

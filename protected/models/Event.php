@@ -32,8 +32,7 @@ class Event extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('event_id, name, date, time, description', 'required'),
-			array('event_id', 'numerical', 'integerOnly'=>true),
+			array('name, date, time, description', 'required'),
 			array('name', 'length', 'max'=>100),
 			array('image', 'length', 'max'=>45),
 			// The following rule is used by search().

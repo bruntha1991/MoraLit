@@ -59,7 +59,7 @@ return array(
             'connectionString' => 'mysql:host=localhost;dbname=moralit',
             'emulatePrepare' => true,
             'username' => 'root',
-            'password' => '',
+            'password' => 'aaa',
             'charset' => 'utf8',
         ),
         'errorHandler' => array(
