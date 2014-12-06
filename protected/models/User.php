@@ -36,8 +36,7 @@ class User extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('user_id, username, firstname, lastname, email, password, user_type, last_login_date, last_login_time', 'required'),
-            array('user_id', 'numerical', 'integerOnly' => true),
+            array('username, firstname, lastname, email, password, user_type, last_login_date, last_login_time', 'required'),
             array('username, firstname, lastname, email, password, phone_number, user_type, faculty', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
@@ -129,5 +128,5 @@ class User extends CActiveRecord {
                 ->queryAll();
         return $data[0]['user_type'];
     }
-
+    
 }
