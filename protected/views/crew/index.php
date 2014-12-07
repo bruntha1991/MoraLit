@@ -13,25 +13,11 @@ $this->menu=array(
 ?>
 <div id="about" class="page-alternate">
 <div class="container">
-    ::before
 <div class="row" img = "assets/img/slide1.jpg">
     	
-        <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">President</span>
-                </div>
-                <img src="assets/img/user1.png" alt="John Doe" class="img-circle">
-            </div>
-            <h3 class="profile-name">John Doe</h3>
-            <p class="profile-description">
-            
-        </div>
-        <!-- End Profile -->
+<!--        
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span4 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -43,9 +29,9 @@ $this->menu=array(
             <h3 class="profile-name">Jane Helf</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span4 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -57,9 +43,9 @@ $this->menu=array(
             <h3 class="profile-name">Joshua Insanus</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span4 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -72,9 +58,9 @@ $this->menu=array(
             <p class="profile-description">
             
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span4 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -86,9 +72,9 @@ $this->menu=array(
             <h3 class="profile-name">Jane Helf</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span4 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -100,9 +86,9 @@ $this->menu=array(
             <h3 class="profile-name">Joshua Insanus</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
         
     	<div class="span3 profile">
         	<div class="image-wrap">
@@ -116,9 +102,9 @@ $this->menu=array(
             <p class="profile-description">
             
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span3 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -130,9 +116,9 @@ $this->menu=array(
             <h3 class="profile-name">Jane Helf</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span3 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -144,9 +130,9 @@ $this->menu=array(
             <h3 class="profile-name">Joshua Insanus</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span3 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -158,9 +144,9 @@ $this->menu=array(
             <h3 class="profile-name">Joshua Insanus</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span2 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -173,9 +159,9 @@ $this->menu=array(
             <p class="profile-description">
             
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span2 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -187,9 +173,9 @@ $this->menu=array(
             <h3 class="profile-name">Jane Helf</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span2 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -201,9 +187,9 @@ $this->menu=array(
             <h3 class="profile-name">Joshua Insanus</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span2 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -216,9 +202,9 @@ $this->menu=array(
             <p class="profile-description">
             
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span2 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -230,9 +216,9 @@ $this->menu=array(
             <h3 class="profile-name">Jane Helf</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
-        <!-- Start Profile -->
+         Start Profile 
     	<div class="span2 profile">
         	<div class="image-wrap">
                 <div class="hover-wrap">
@@ -244,9 +230,16 @@ $this->menu=array(
             <h3 class="profile-name">Joshua Insanus</h3>
             <p class="profile-description">
         </div>
-        <!-- End Profile -->
+         End Profile 
         
+        -->
         
+        <h1>Crews</h1>
+
+<?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view',
+)); ?>
         
     </div>
 </div>
@@ -254,9 +247,4 @@ $this->menu=array(
 </div>
 
 
-<h1>Crews</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
