@@ -12,6 +12,16 @@ $this->menu=array(
 	array('label'=>'Manage Crew', 'url'=>array('admin')),
 );
 ?>
+<?php
+$command = $connection->createCommand('SELECT * FROM crew');
+$titles = $command->queryColumn();
+
+
+
+?>
+
+
+
 <div class="container">
 <div class="container-fluid">
     <div class="row-fluid">
