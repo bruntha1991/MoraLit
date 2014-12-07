@@ -15,7 +15,7 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('last_name')); ?>:</b>
 	<?php echo CHtml::encode($data->last_name); ?>
-	<br />
+	<br />hy 
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('faculty')); ?>:</b>
 	<?php echo CHtml::encode($data->faculty); ?>
