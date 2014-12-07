@@ -11,242 +11,149 @@ $this->menu=array(
 	array('label'=>'Manage Crew', 'url'=>array('admin')),
 );
 ?>
+<?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view',
+)); ?>
+
 <div id="about" class="page-alternate">
 <div class="container">
-    ::before
-<div class="row" img = "assets/img/slide1.jpg">
+    
+    <div class="hero-unit"></div>
+    
+<div class="row">
     	
         <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">President</span>
-                </div>
-                <img src="assets/img/user1.png" alt="John Doe" class="img-circle">
-            </div>
-            <h3 class="profile-name">John Doe</h3>
+        <div class="span4 center-block" style="text-align: center; margin-bottom: 8px" >        	
+            <img src="assets/img/user1.png" alt="John Doe" class="img-circle " id="president" hspace="4%" vspace="1%" >           
+            <h3 class="profile-name">President</h3>
+            <p class="profile-description">            
+        </div>
+        <!-- End Profile -->
+        
+        <!-- Start Profile -->
+    	<div class="span4 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user2.png" alt="Jane Helf" class="img-circle" id="vice-president" hspace="4%" vspace="1%">          
+            <h3 class="profile-name">Vice-President</h3>
+            <p class="profile-description">
+        </div>
+        <!-- End Profile -->
+        
+        <!-- Start Profile -->
+    	<div class="span4 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle" id="vice-president" hspace="4%" vspace="1%">            
+            <h3 class="profile-name">Vice-President</h3>
+            <p class="profile-description">
+        </div>
+        <!-- End Profile -->
+                
+        <!-- Start Profile -->
+    	<div class="span4 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user1.png" alt="John Doe" class="img-circle" hspace="4%" vspace="1%">            
+            <h3 class="profile-name">Secretary</h3>
             <p class="profile-description">
             
         </div>
         <!-- End Profile -->
         
         <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Vice-President</span>
-                </div>
-                <img src="assets/img/user2.png" alt="Jane Helf" class="img-circle">
-            </div>
-            <h3 class="profile-name">Jane Helf</h3>
+        <div class="span4 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user2.png" alt="Jane Helf" class="img-circle" hspace="4%" vspace="1%">
+            <h3 class="profile-name">Vice-Secretary</h3>
             <p class="profile-description">
         </div>
         <!-- End Profile -->
         
         <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Vice President</span>
-                </div>
-                <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle">
-            </div>
-            <h3 class="profile-name">Joshua Insanus</h3>
+        <div class="span4 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle" hspace="4%" vspace="1%">            
+            <h3 class="profile-name">Treasurer</h3>
             <p class="profile-description">
         </div>
         <!-- End Profile -->
         
         <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Secretary</span>
-                </div>
-                <img src="assets/img/user1.png" alt="John Doe" class="img-circle">
-            </div>
-            <h3 class="profile-name">John Doe</h3>
+        <div class="span3 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user1.png" alt="John Doe" class="img-circle" hspace="4%" vspace="1%">            
+            <h3 class="profile-name">Editor</h3>
             <p class="profile-description">
             
         </div>
         <!-- End Profile -->
         
         <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Vice Secretary</span>
-                </div>
-                <img src="assets/img/user2.png" alt="Jane Helf" class="img-circle">
-            </div>
-            <h3 class="profile-name">Jane Helf</h3>
+    	<div class="span3 center-block" style="text-align: center; margin-bottom: 8px" > 
+            <img src="assets/img/user2.png" alt="Jane Helf" class="img-circle" hspace="4%" vspace="1%">           
+            <h3 class="profile-name">Editor</h3>
             <p class="profile-description">
         </div>
         <!-- End Profile -->
         
         <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Treasurer</span>
-                </div>
-                <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle">
-            </div>
-            <h3 class="profile-name">Joshua Insanus</h3>
+    	<div class="span3 center-block" style="text-align: center; margin-bottom: 8px" > 
+            <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle" hspace="4%" vspace="1%">        
+            <h3 class="profile-name">Editor</h3>
             <p class="profile-description">
         </div>
         <!-- End Profile -->
         
         <!-- Start Profile -->
+    	<div class="span3 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle" hspace="4%" vspace="1%" onclick="popitup()">
+            <h3 class="profile-name">Web Coordinator</h3>
+            <p class="profile-description">
+        </div>
+        <!-- End Profile -->
         
-    	<div class="span3 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Editor-1</span>
-                </div>
-                <img src="assets/img/user1.png" alt="John Doe" class="img-circle">
-            </div>
-            <h3 class="profile-name">John Doe</h3>
+        <!-- Start Profile -->
+    	<div class="span2 center-block" style="text-align: center; margin-bottom: 8px" > 
+            <img src="assets/img/user1.png" alt="John Doe" class="img-circle" hspace="4%" vspace="1%">            
+            <h3 class="profile-name">Representative</h3>
+            <p class="profile-description">            
+        </div>
+        <!-- End Profile -->
+        
+        <!-- Start Profile -->
+    	<div class="span2 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user2.png" alt="Jane Helf" class="img-circle" hspace="4%" vspace="1%">            
+            <h3 class="profile-name">Representative</h3>
+            <p class="profile-description">
+        </div>
+        <!-- End Profile -->
+        
+        <!-- Start Profile -->
+    	<div class="span2 center-block" style="text-align: center; margin-bottom: 8px"> 
+           <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle" hspace="4%" vspace="1%">            
+            <h3 class="profile-name">Representative</h3>
+            <p class="profile-description">
+        </div>
+        <!-- End Profile -->
+        
+        <!-- Start Profile -->
+    	<div class="span2 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user1.png" alt="John Doe" class="img-circle" hspace="4%" vspace="1%">            
+            <h3 class="profile-name">Representative</h3>
             <p class="profile-description">
             
         </div>
         <!-- End Profile -->
         
         <!-- Start Profile -->
-    	<div class="span3 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Editor-2</span>
-                </div>
-                <img src="assets/img/user2.png" alt="Jane Helf" class="img-circle">
-            </div>
-            <h3 class="profile-name">Jane Helf</h3>
+    	<div class="span2 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user2.png" alt="Jane Helf" class="img-circle" hspace="4%" vspace="1%">            
+            <h3 class="profile-name">Representative</h3>
             <p class="profile-description">
         </div>
         <!-- End Profile -->
         
         <!-- Start Profile -->
-    	<div class="span3 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Editor-3</span>
-                </div>
-                <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle">
-            </div>
-            <h3 class="profile-name">Joshua Insanus</h3>
+    	<div class="span2 center-block" style="text-align: center; margin-bottom: 8px"> 
+            <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle" hspace="4%" vspace="1%">            
+            <h3 class="profile-name">Representative</h3>
             <p class="profile-description">
         </div>
         <!-- End Profile -->
-        
-        <!-- Start Profile -->
-    	<div class="span3 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Web Coordinator</span>
-                </div>
-                <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle">
-            </div>
-            <h3 class="profile-name">Joshua Insanus</h3>
-            <p class="profile-description">
-        </div>
-        <!-- End Profile -->
-        
-        <!-- Start Profile -->
-    	<div class="span2 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Representative-1</span>
-                </div>
-                <img src="assets/img/user1.png" alt="John Doe" class="img-circle">
-            </div>
-            <h3 class="profile-name">John Doe</h3>
-            <p class="profile-description">
-            
-        </div>
-        <!-- End Profile -->
-        
-        <!-- Start Profile -->
-    	<div class="span2 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Representative-2</span>
-                </div>
-                <img src="assets/img/user2.png" alt="Jane Helf" class="img-circle">
-            </div>
-            <h3 class="profile-name">Jane Helf</h3>
-            <p class="profile-description">
-        </div>
-        <!-- End Profile -->
-        
-        <!-- Start Profile -->
-    	<div class="span2 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Representative-3</span>
-                </div>
-                <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle">
-            </div>
-            <h3 class="profile-name">Joshua Insanus</h3>
-            <p class="profile-description">
-        </div>
-        <!-- End Profile -->
-        
-        <!-- Start Profile -->
-    	<div class="span2 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Representative-4</span>
-                </div>
-                <img src="assets/img/user1.png" alt="John Doe" class="img-circle">
-            </div>
-            <h3 class="profile-name">John Doe</h3>
-            <p class="profile-description">
-            
-        </div>
-        <!-- End Profile -->
-        
-        <!-- Start Profile -->
-    	<div class="span2 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Representative-5</span>
-                </div>
-                <img src="assets/img/user2.png" alt="Jane Helf" class="img-circle">
-            </div>
-            <h3 class="profile-name">Jane Helf</h3>
-            <p class="profile-description">
-        </div>
-        <!-- End Profile -->
-        
-        <!-- Start Profile -->
-    	<div class="span2 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Representative-6</span>
-                </div>
-                <img src="assets/img/user3.png" alt="Joshua Insanus" class="img-circle">
-            </div>
-            <h3 class="profile-name">Joshua Insanus</h3>
-            <p class="profile-description">
-        </div>
-        <!-- End Profile -->
-        
-        
+       
         
     </div>
 </div>
@@ -254,9 +161,17 @@ $this->menu=array(
 </div>
 
 
-<h1>Crews</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+
+    
+    
+<script>   
+<!--
+function popup(url) {
+	newwindow=window.open(url,'name','height=200,width=150');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+
+// -->
+</script>
