@@ -2637,3 +2637,110 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/moralit/index.php?r=admin/site/contact
 ---
+2014/12/07 06:19:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\MoraLit\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\MoraLit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\MoraLit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\MoraLit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\MoraLit\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\MoraLit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(141): CWebApplication->runController('crew/view')
+#10 C:\xampp\htdocs\MoraLit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\MoraLit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/moralit/index.php?r=crew/view
+---
+2014/12/07 06:21:11 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\MoraLit\protected\controllers\SiteController.php:92) (C:\xampp\htdocs\MoraLit\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\MoraLit\protected\controllers\SiteController.php(97): SiteController->redirect()
+#1 C:\xampp\htdocs\MoraLit\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\MoraLit\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\MoraLit\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\MoraLit\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\MoraLit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\MoraLit\index.php(13): CWebApplication->run()
+REQUEST_URI=/moralit/index.php?r=site/login
+in C:\xampp\htdocs\MoraLit\protected\controllers\SiteController.php (97)
+in C:\xampp\htdocs\MoraLit\index.php (13)
+2014/12/07 06:21:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\MoraLit\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\MoraLit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\MoraLit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\MoraLit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\MoraLit\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\MoraLit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(141): CWebApplication->runController('crew/view')
+#10 C:\xampp\htdocs\MoraLit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\MoraLit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/moralit/index.php?r=crew/view
+---
+2014/12/07 08:51:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/users".' in C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users')
+#1 C:\xampp\htdocs\MoraLit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\MoraLit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/moralit/index.php?r=admin/users
+---
+2014/12/07 09:00:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\MoraLit\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\MoraLit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\MoraLit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\MoraLit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\MoraLit\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\MoraLit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/user/view')
+#10 C:\xampp\htdocs\MoraLit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\MoraLit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/moralit/index.php?r=admin/user/view
+---
+2014/12/07 11:38:04 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\MoraLit\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\MoraLit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\MoraLit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\MoraLit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\MoraLit\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\MoraLit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(141): CWebApplication->runController('crew/view')
+#10 C:\xampp\htdocs\MoraLit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\MoraLit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/moralit/index.php?r=crew/view
+---
+2014/12/07 12:05:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\MoraLit\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\MoraLit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\MoraLit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\MoraLit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\MoraLit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\MoraLit\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\MoraLit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\MoraLit\framework\web\CWebApplication.php(141): CWebApplication->runController('crew/view')
+#10 C:\xampp\htdocs\MoraLit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\MoraLit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/moralit/index.php?r=crew/view
+---
