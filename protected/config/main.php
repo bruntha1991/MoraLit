@@ -56,10 +56,10 @@ return array(
         ),
 // uncomment the following to use a MySQL database
         'db' => array(
-            'connectionString' => 'mysql:host=localhost;dbname=moralit',
+            'connectionString' => 'mysql:host=localhost;dbname=MoraLit',
             'emulatePrepare' => true,
             'username' => 'root',
-            'password' => 'aaa',
+            'password' => '',
             'charset' => 'utf8',
         ),
         'errorHandler' => array(
