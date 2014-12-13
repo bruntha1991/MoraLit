@@ -44,11 +44,11 @@ class SiteController extends Controller {
 //            }
             
             $extension=$model->image->getExtensionName();
-            $slideNo=$model->getImageNo();
+//            $slideNo=$model->getImageNo();
             echo "df";
             if($model->validate()) {
                 //The image is valid, you can save it
-                $path = 'assets/img/home_slider/'.$slideNo.'.'.$extension;
+                $path = 'assets/img/home_slider/'.'slide-1'.'.'.$extension;
                 $model->image->saveAs($path);
             }
         }
