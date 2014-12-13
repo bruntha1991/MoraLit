@@ -2785,3 +2785,72 @@ Stack trace:
 REQUEST_URI=/MoraLit/index.php?r=user/create
 HTTP_REFERER=http://localhost/MoraLit/index.php
 ---
+2014/12/13 22:18:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/course".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/course')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=admin/course
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=admin
+---
+2014/12/13 22:19:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "blo".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('blo')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=blo
+---
+2014/12/13 22:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/course".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/course')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=admin/course
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=admin
+---
+2014/12/13 22:25:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/course".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/course')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=admin/course
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=admin
+---
+2014/12/13 22:56:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Test/blog".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('Test/blog')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=Test/blog
+---
+2014/12/13 22:57:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Test/user/create".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('Test/user/creat...')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=Test/user/create
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=Test
+---
+2014/12/13 22:57:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Test/blog".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('Test/blog')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=Test/blog
+---
+2014/12/13 23:09:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/course".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/course')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=admin/course
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=admin
+---
