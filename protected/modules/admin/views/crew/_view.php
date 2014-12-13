@@ -6,11 +6,11 @@
 <div class="view">
 
     <!-- Start Profile -->
-    <div class="container">
         <div class="span4 profile">
             <div class="image-wrap">
                 <div class="hover-wrap">
                     <span class="overlay-img"></span>
+                    
                     <span class="overlay-text-thumb">
     <!--                    <b><?php echo CHtml::encode($data->getAttributeLabel('designation')); ?>:</b>-->
                         <h3 class="profile-name">
@@ -36,7 +36,6 @@
             <p class="profile-description">
 
         </div>
-    </div>
     <!-- End Profile -->
 
 <!--	<b><?php echo CHtml::encode($data->getAttributeLabel('crew_id')); ?>:</b>
