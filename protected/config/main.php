@@ -15,7 +15,8 @@ return array(
     'import' => array(
         'application.models.*',
         'application.components.*',
-        'application.extensions.CAdvancedArFindBehavior'
+        'application.extensions.CAdvancedArFindBehavior',
+        'application.extensions.*',
     ),
     'modules' => array(
         'admin',
