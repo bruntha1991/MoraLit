@@ -60,24 +60,28 @@ class CrewController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
-	{
-		$model=new Crew;
+	public function actionCreate() {
+            $model = new Crew;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+            // Uncomment the following line if AJAX validation is needed
+            // $this->performAjaxValidation($model);
 
-		if(isset($_POST['Crew']))
-		{
-			$model->attributes=$_POST['Crew'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->crew_id));
-		}
+            if (isset($_POST['Crew'])) {
+                $model->attributes = $_POST['Crew'];
+                $uploadedFile = CUploadedFile::getInstance($model, 'image');
+                $fileName = $uploadedFile;
+                $model->image = $fileName;
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
+                if ($model->save()) {
+                    $uploadedFile->saveAs('assets/crew/' . $uploadedFile->name); //save image
+                }
+                $this->redirect(array('view', 'id' => $model->crew_id));
+            }
+
+            $this->render('create', array(
+                'model' => $model,
+            ));
+    }
 
 	/**
 	 * Updates a particular model.

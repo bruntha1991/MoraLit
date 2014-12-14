@@ -21,6 +21,7 @@
                 </div>
                 <?php
                 $imghtml= CHtml::image($data->image);
+                $img ='assets/crew/' . $imghtml->name;
                 echo CHtml::link($imghtml, array('view', 'id'=>$data->crew_id));
                 ?>          
 
