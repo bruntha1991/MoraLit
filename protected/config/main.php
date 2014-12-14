@@ -15,7 +15,8 @@ return array(
     'import' => array(
         'application.models.*',
         'application.components.*',
-        'application.extensions.CAdvancedArFindBehavior'
+        'application.extensions.CAdvancedArFindBehavior',
+        'application.extensions.*',
     ),
     'modules' => array(
         'admin',
@@ -57,7 +58,7 @@ return array(
         ),
 // uncomment the following to use a MySQL database
         'db' => array(
-            'connectionString' => 'mysql:host=localhost;dbname=moralit',
+            'connectionString' => 'mysql:host=localhost;dbname=MoraLit',
             'emulatePrepare' => true,
             'username' => 'root',
             'password' => '',
