@@ -16,19 +16,47 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Crew #<?php echo $model->crew_id; ?></h1>
-
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'crew_id',
-		'first_name',
-		'last_name',
-		'faculty',
-		'year',
-		'designation',
-		'contact_no',
-		'email',
-		'image',
-	),
-)); ?>
+<div class="container" >
+    <div class='hero-unit' >
+        
+        <h2><?php echo $model->designation; ?> - <?php echo $model->year; ?> </h2>                
+        <table class="table table-striped" style="width:80%;background-color: #E0F8F7;" align ="center">
+            <col width="240">
+            <col width="130">
+            <tbody class="hover">
+            <tr class="warning" >
+                <div>
+                    <td rowspan="5">
+                    <?php
+                        $imghtml= CHtml::image($model->image);
+                        echo CHtml::link($imghtml, array('view', 'id'=>$model->crew_id));
+                    ?> 
+                    </td>
+                </div>
+            </tr> 
+            <tr class="success">
+                <div>
+                    <td><h4>Name : </h4></td>
+                    <td><?php echo $model->first_name;?> <?php echo $model->last_name; ?></td>
+                </div>
+            </tr>
+            <tr>
+                <div> 
+                    <td><h4>Faculty : </h4></td>
+                    <td><?php echo $model->faculty; ?></td>
+                </div></tr>
+            <tr class="success">
+                <div> 
+                    <td><h4>Email : </h4></td>
+                    <td><?php echo $model->email; ?></td>
+                </div></tr>
+            <tr>
+                <div> 
+                    <td><h4>Contact No : </h4></td>
+                    <td><?php echo $model->contact_no; ?></td>
+                </div>
+            </tr>                    
+            </tbody>
+        </table>
+    </div>
+</div>

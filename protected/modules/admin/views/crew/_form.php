@@ -3,74 +3,74 @@
 /* @var $model Crew */
 /* @var $form CActiveForm */
 ?>
+    
 
-<div class="form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	'id'=>'crew-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
+    'type' => 'horizontal',
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+    <div class="container">
+        <div class="span2"></div>
+        <div class="span9">
+           <p class="note">Fields with <span class="required">*</span> are required.</p>
+           
+           <div class="well">
+               <div class="control-group">
+                   <?php echo $form->textFieldRow($model,'first_name'); ?>
+               </div>
+               
+               <div class="control-group">
+                   <?php echo $form->textFieldRow($model,'last_name'); ?>
+               </div>
+               
+               <div class="control-group">
+                   <div class="control-label">
+                        <?php echo $form->labelEx($model,'faculty'); ?>
+                   </div>
+                   <div class="controls">
+                   <?php $data = array('','Engineering','Architecture','Information Technology','National Diploma in Technology');
+                echo $form->dropDownList($model,'faculty',array_combine($data, $data)); ?></td>
+                   </div>
+               </div>
+               
+               <div class="control-group">
+                   <?php echo $form->textFieldRow($model,'year',array('size'=>4,'maxlength'=>4)); ?>
+               </div>
+               
+               <div class="control-group">
+                   <div class="control-label">
+                   <?php echo $form->labelEx($model,'designation'); ?>
+                   </div>    
+                   <div class="controls">
+                   <?php $data = array('','President','Vice-President','Secretary',
+                    'Vice-Secretary','Treasurer','Editor','Web-Coordinator','Representative');
+                echo $form->dropDownList($model,'designation',array_combine($data, $data)); ?>
+                   </div>
+               </div>
+               
+               <div class="control-group">
+                   <?php echo $form->textFieldRow($model,'contact_no',array('size'=>10,'maxlength'=>10)); ?>
+               </div>
+               
+               <div class="control-group">
+                   <?php echo $form->emailField($model,'email'); ?>
+               </div>
+               
+               <div class="control-group">
+                   <?php echo CHtml::activeFileField($model, 'image'); ?>
+               </div>
+               
+           </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'first_name'); ?>
-		<?php echo $form->textField($model,'first_name',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'first_name'); ?>
-	</div>
+        <div class="controls">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+                </div>
+            <br /><br /><br />
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'last_name'); ?>
-		<?php echo $form->textField($model,'last_name',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'last_name'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'faculty'); ?>
-		<?php echo $form->textField($model,'faculty',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'faculty'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'year'); ?>
-		<?php echo $form->textField($model,'year',array('size'=>4,'maxlength'=>4)); ?>
-		<?php echo $form->error($model,'year'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'designation'); ?>
-		<?php echo $form->textField($model,'designation',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'designation'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'contact_no'); ?>
-		<?php echo $form->textField($model,'contact_no',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'contact_no'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'image'); ?>
-		<?php echo $form->textField($model,'image',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'image'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
-
-</div><!-- form -->
+    <?php $this->endWidget(); ?>
+        </div>
+    </div><!-- form -->

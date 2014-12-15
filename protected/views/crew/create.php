@@ -12,7 +12,7 @@ $this->menu=array(
 	array('label'=>'Manage Crew', 'url'=>array('admin')),
 );
 ?>
-
+<div class="container">
 <h1>Create Crew</h1>
-
+</div>
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
