@@ -3,7 +3,8 @@
 /* @var $model Crew */
 /* @var $form CActiveForm */
 ?>
-
+    
+<div class="container">
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -14,6 +15,7 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
+
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -33,7 +35,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'faculty'); ?>
-		<?php echo $form->textField($model,'faculty',array('size'=>45,'maxlength'=>45)); ?>
+           
+                <?php $data = array('','Engineering','Architecture','Information Technology','National Diploma in Technology');
+                echo $form->dropDownList($model,'faculty',array_combine($data, $data)); ?>
 		<?php echo $form->error($model,'faculty'); ?>
 	</div>
 
@@ -45,7 +49,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'designation'); ?>
-		<?php echo $form->textField($model,'designation',array('size'=>45,'maxlength'=>45)); ?>
+		<?php $data = array('','President','Vice-President','Secretary',
+                    'Vice-Secretary','Treasurer','Editor','Web-Coordinator','Representative');
+                echo $form->dropDownList($model,'designation',array_combine($data, $data)); ?>
 		<?php echo $form->error($model,'designation'); ?>
 	</div>
 
@@ -57,15 +63,18 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->emailField($model,'email'); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'image'); ?>
-		<?php echo $form->textField($model,'image',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'image'); ?>
-	</div>
+        <div class="row">
+        <?php echo $form->labelEx($model, 'image'); ?>
+        <?php echo CHtml::activeFileField($model, 'image'); ?>  
+        <?php echo $form->error($model, 'image'); ?>
+      
+            
+        </div>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
@@ -73,4 +82,23 @@
 
 <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div>
+</div>    
+    <!-- form -->
+    
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/vendor/jquery.ui.widget.js"></script>
+<script src="js/jquery.iframe-transport.js"></script>
+<script src="js/jquery.fileupload.js"></script>
+<script>
+$(function () {
+    $('#fileupload').fileupload({
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo(document.body);ok
+            });
+        }
+    });
+});
+</script>

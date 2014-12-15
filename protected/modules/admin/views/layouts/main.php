@@ -120,7 +120,7 @@
         <!--        <div class="container">-->
 
 
-        <?php echo $content; ?>
+       <?php echo $content; ?>
 
         <div class="clear"></div>
 
