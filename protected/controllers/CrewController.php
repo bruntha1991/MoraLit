@@ -55,34 +55,36 @@ class CrewController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
-        
-       
+
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-public function actionCreate() {
-        $model = new Crew;
+	public function actionCreate()
+	{
+		$model=new Crew;
 
-// Uncomment the following line if AJAX validation is needed
-// $this->performAjaxValidation($model);
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
 
-        if (isset($_POST['Crew'])) {
-            $model->attributes = $_POST['Crew'];
-            $uploadedFile = CUploadedFile::getInstance($model, 'image');
-            $fileName = $uploadedFile;
-            $model->image = $fileName;
+		if(isset($_POST['Crew']))
+		{
+			$model->attributes=$_POST['Crew'];
+                        $uploadedFile = CUploadedFile::getInstance($model, 'image');
+                        $fileName = $uploadedFile;
+                        $model->image = $fileName;
 
-            if ($model->save()) {
-                $uploadedFile->saveAs('assets/crew/' . $uploadedFile->name); //save image
-            }
-            $this->redirect(array('view', 'id' => $model->crew_id));
-        }
+			if($model->save()){
+                            $uploadedFile->saveAs("assets/crew/" . $uploadedFile->name); //save image
+                        }
+                        $this->redirect(array('view','id'=>$model->crew_id));
+		}
 
-        $this->render('create', array(
-            'model' => $model,
-        ));
-    }
+		$this->render('create',array(
+			'model'=>$model,
+		));
+	}
+
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
@@ -126,22 +128,10 @@ public function actionCreate() {
 	 */
 	public function actionIndex()
 	{
-            $year= 2015;
-            $criteria = new CDbCriteria(array('condition'=>"year = '$year'"));
-            //$criteria->group = 'designation';
-            $mysort = array('President','Vice-President','Secretary','Vice-Secretary','Treasurer','Editor','Web-Coordinator','Representative');
-            
-            /*$criteria->select='*';
-            $criteria->condition='year = year';
-            $criteria->params = array(':year'=>"2015");*/
-            
-            $dataProvider=new CActiveDataProvider('Crew', array(
-                'criteria' => $criteria,
-            ));
-           
-            $this->render('index',array(
+		$dataProvider=new CActiveDataProvider('Crew');
+		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-		));     
+		));
 	}
 
 	/**
@@ -169,9 +159,8 @@ public function actionCreate() {
 	public function loadModel($id)
 	{
 		$model=Crew::model()->findByPk($id);
-		if($model===null){
+		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
-                }
 		return $model;
 	}
 
