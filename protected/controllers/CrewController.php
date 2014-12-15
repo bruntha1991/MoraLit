@@ -70,8 +70,14 @@ class CrewController extends Controller
 		if(isset($_POST['Crew']))
 		{
 			$model->attributes=$_POST['Crew'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->crew_id));
+                        $uploadedFile = CUploadedFile::getInstance($model, 'image');
+                        $fileName = $uploadedFile;
+                        $model->image = $fileName;
+
+			if($model->save()){
+                            $uploadedFile->saveAs("assets/crew/" . $uploadedFile->name); //save image
+                        }
+                        $this->redirect(array('view','id'=>$model->crew_id));
 		}
 
 		$this->render('create',array(

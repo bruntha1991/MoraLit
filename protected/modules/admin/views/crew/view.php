@@ -1,12 +1,10 @@
 <?php
 /* @var $this CrewController */
 /* @var $model Crew */
-
 $this->breadcrumbs=array(
 	'Crews'=>array('index'),
 	$model->crew_id,
 );
-
 $this->menu=array(
 	array('label'=>'List Crew', 'url'=>array('index')),
 	array('label'=>'Create Crew', 'url'=>array('create')),
@@ -16,49 +14,47 @@ $this->menu=array(
 );
 ?>
 
-
-
-<div class="span6">
-    <h1>View Crew #<?php echo $model->crew_id; ?></h1>
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<div class="control-group">
-		<?php echo $form->labelEx($model,'username',array('class'=>'control-label','label'=>'Email')); ?>
-		<div class="controls"><?php echo $form->textField($model,'username',array('placeholder'=>'Enter your email')); ?>
-		<?php echo $form->error($model,'username'); ?></div>
-	</div>
-
-	<div class="control-group">
-		<?php echo $form->labelEx($model,'password',array('class'=>'control-label')); ?>
-		<div class="controls"><?php echo $form->passwordField($model,'password',array('placeholder'=>'Enter Password')); ?>
-		<?php echo $form->error($model,'password'); ?></div>
-		
-	</div>
-
-	<div class="checkbox">
-           <div class="controls"> <?php echo $form->checkBox($model, 'rememberMe'); ?>
-            <?php echo $form->label($model, 'rememberMe'); ?>
-            <?php echo $form->error($model, 'rememberMe'); ?></div>
-        </div>
-	
+<div class="container" >
+    <div class='hero-unit' >
         
-        
-		<div class="controls"><a href=<?php echo $this->createUrl('user/forgotpassword') ?>>Forgot password?</a></div><br/>
-	<div class="controls"><?php echo CHtml::submitButton('Sign in',array('class'=>'button button-news')); ?></div>
-        </div>
-
-
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'crew_id',
-		'first_name',
-		'last_name',
-		'faculty',
-		'year',
-		'designation',
-		'contact_no',
-		'email',
-		'image',
-	),
-)); ?>
+        <h2><?php echo $model->designation; ?> - <?php echo $model->year; ?> </h2>                
+        <table class="table table-striped" style="width:80%;background-color: #E0F8F7;" align ="center">
+            <col width="240">
+            <col width="130">
+            <tbody class="hover">
+            <tr class="warning" >
+                <div>
+                    <td rowspan="5">
+                    <?php
+                        $imghtml= CHtml::image($model->image);
+                        echo CHtml::link($imghtml, array('view', 'id'=>$model->crew_id));
+                    ?> 
+                    </td>
+                </div>
+            </tr> 
+            <tr class="success">
+                <div>
+                    <td><h4>Name : </h4></td>
+                    <td><?php echo $model->first_name;?> <?php echo $model->last_name; ?></td>
+                </div>
+            </tr>
+            <tr>
+                <div> 
+                    <td><h4>Faculty : </h4></td>
+                    <td><?php echo $model->faculty; ?></td>
+                </div></tr>
+            <tr class="success">
+                <div> 
+                    <td><h4>Email : </h4></td>
+                    <td><?php echo $model->email; ?></td>
+                </div></tr>
+            <tr>
+                <div> 
+                    <td><h4>Contact No : </h4></td>
+                    <td><?php echo $model->contact_no; ?></td>
+                </div>
+            </tr>                    
+            </tbody>
+        </table>
+    </div>
+</div>

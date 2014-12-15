@@ -3,7 +3,8 @@
 /* @var $model Crew */
 /* @var $form CActiveForm */
 ?>
-
+    
+<div class="container">
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -14,6 +15,7 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
+
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -60,12 +62,23 @@
 		<?php echo $form->textField($model,'email',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
-
+<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'image'); ?>
 		<?php echo $form->textField($model,'image',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'image'); ?>
 	</div>
+-->
+
+        <div class="row">
+            
+            <?php echo $form->labelEx($model,'image'); ?>
+            <input id="fileupload" type="file" name="files[]" data-url="assets/img" multiple>
+               
+            <?php echo $form->error($model,'image'); ?>
+            
+        </div>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
@@ -73,4 +86,22 @@
 
 <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div>
+</div>    
+    <!-- form -->
+    
+    
+<script src="js/jquery.iframe-transport.js"></script>
+<script src="js/jquery.fileupload.js"></script>
+<script>
+$(function () {
+    $('#fileupload').fileupload({
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo(document.body);
+            });
+        }
+    });
+});
+</script>
