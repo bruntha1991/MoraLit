@@ -15,10 +15,12 @@ return array(
     'import' => array(
         'application.models.*',
         'application.components.*',
-        'application.extensions.CAdvancedArFindBehavior'
+        'application.extensions.CAdvancedArFindBehavior',
+        'application.extensions.*',
     ),
     'modules' => array(
         'admin',
+        'Test',
 // uncomment the following to enable the Gii tool
         'gii' => array(
             'class' => 'system.gii.GiiModule',
@@ -56,7 +58,7 @@ return array(
         ),
 // uncomment the following to use a MySQL database
         'db' => array(
-            'connectionString' => 'mysql:host=localhost;dbname=moralit',
+            'connectionString' => 'mysql:host=localhost;dbname=MoraLit',
             'emulatePrepare' => true,
             'username' => 'root',
             'password' => '',

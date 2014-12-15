@@ -27,7 +27,7 @@
 
         <?php
         $this->widget('bootstrap.widgets.TbNavbar', array(
-            'brand' => '<b>MoraLit Admin Dashboard</b>',
+            'brand' => 'MoraLit Dashboard',
             'brandUrl' => array('/admin'),
             'type' => 'inverse',
             'collapse'=>true,
@@ -74,92 +74,32 @@
                     <ul class="nav nav-list">
 
 
-                        <!--                <li><a href="index.php?r=admin/course">Course Management</a></li>
-                                            <li><a href="index.php?r=admin/level">Level Management</a></li>-->
-                        <!--                    <li><a href="index.php?r=admin/subject">Subject Management</a></li>-->
-                        <!--                    <li><a href="index.php?r=admin/subjectArea">Subject-Area Management</a></li>-->
-                        <!--                    <li><a href="index.php?r=admin/sitting">Sitting Management</a></li>-->
-                        <!--                    <li><a href="index.php?r=admin/news">News Management</a></li>-->
-                        <!--                    <li><a href="index.php?r=admin/country">Country Management</a></li>-->
-
                         <li <?php echo ($route == 'course') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Course Management', array('course/index')) ?>
+                            <?php echo CHtml::link('Crew Management', array('course/index')) ?>
                         </li>
 
                         <li <?php echo ($route == 'level') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Level Management', array('level/index')) ?>
+                            <?php echo CHtml::link('Blog Management', array('level/index')) ?>
                         </li>
 
                         <li <?php echo ($route == 'subject') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Subject Management', array('subject/index')) ?>
+                            <?php echo CHtml::link('User Management', array('subject/index')) ?>
                         </li>
 
                         <li <?php echo ($route == 'subjectArea') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Subject-Area Management', array('subjectArea/index')) ?>
+                            <?php echo CHtml::link('Comments Management', array('subjectArea/index')) ?>
                         </li>
 
                         <li <?php echo ($route == 'sitting') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Sitting Management', array('sitting/index')) ?>
+                            <?php echo CHtml::link('Galary Management', array('sitting/index')) ?>
                         </li>
 
                         <li <?php echo ($route == 'news') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('News Management', array('news/index')) ?>
+                            <?php echo CHtml::link('Event Management', array('news/index')) ?>
                         </li>
 
                         <li <?php echo ($route == 'country') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Country Management', array('country/index')) ?>
-                        </li>
-
-
-
-                    </ul>
-                </div><!--/.well -->
-                <div class="well sidebar-nav">
-                    <ul class="nav nav-list">
-
-                        <!--                    <li /*class="active"*/><a href="index.php?r=admin/student">Student Management</a></li>-->
-                        <!--                    <li><a href="index.php?r=admin/lecturer">Lecturer Management</a></li>-->
-                        <!--                    <li><a href="index.php?r=admin/temporaryUser">Temporary Users</a></li>                    -->
-                        <!--                    <li><a href="index.php?r=admin/exam">Exam Management</a></li>-->
-                        <!--                    <li><a href="index.php?r=admin/question">Question Management</a></li>-->
-
-                        <!--                    <li><a href="index.php?r=admin/result">Result Management</a></li>-->
-
-                        <?php if ($route != 'studentExam') { ?>
-
-                            <li <?php echo ($route == 'student') ? 'class="active"' : '' ?>>
-                                <?php echo CHtml::link('Student Management', array('student/index')) ?>
-                            </li>
-
-                        <?php } else { ?>  
-                            <li <?php echo ($route == 'studentExam') ? 'class="active"' : '' ?>>
-                                <?php echo CHtml::link('Student Management', array('student/index')) ?>
-                            </li>
-
-                            <?php }
-                        ?>
-
-
-
-
-                        <li <?php echo ($route == 'lecturer') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Lecturer Management', array('lecturer/index')) ?>
-                        </li>
-
-                        <li <?php echo ($route == 'temporaryUser') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Temporary Users', array('temporaryUser/index')) ?>
-                        </li>
-
-                        <li <?php echo ($route == 'exam') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Exam Management', array('exam/index')) ?>
-                        </li>
-
-                        <li <?php echo ($route == 'question') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Question Management', array('question/index')) ?>
-                        </li>
-
-                        <li <?php echo ($route == 'result') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Result Management', array('result/index')) ?>
+                            <?php echo CHtml::link('Sub-Event Management', array('country/index')) ?>
                         </li>
 
 
@@ -180,7 +120,7 @@
         <!--        <div class="container">-->
 
 
-        <?php echo $content; ?>
+       <?php echo $content; ?>
 
         <div class="clear"></div>
 
