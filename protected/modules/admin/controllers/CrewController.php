@@ -66,12 +66,17 @@ class CrewController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Crew']))
+                if(isset($_POST['Crew']))
 		{
 			$model->attributes=$_POST['Crew'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->crew_id));
+                        $uploadedFile = CUploadedFile::getInstance($model, 'image');
+                        $fileName = $uploadedFile;
+                        $model->image = $fileName;
+
+			if($model->save()){
+                            $uploadedFile->saveAs("assets/crew/" . $uploadedFile->name); //save image
+                        }
+                        $this->redirect(array('view','id'=>$model->crew_id));
 		}
 
 		$this->render('create',array(
@@ -122,7 +127,18 @@ class CrewController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Crew');
+            $year= 2015;
+            $criteria = new CDbCriteria(array('condition'=>"year = '$year'"));
+            //$criteria->group = 'designation';
+            $mysort = array('President','Vice-President','Secretary','Vice-Secretary','Treasurer','Editor','Web-Coordinator','Representative');
+            
+            /*$criteria->select='*';
+            $criteria->condition='year = year';
+            $criteria->params = array(':year'=>"2015");*/
+            
+            $dataProvider=new CActiveDataProvider('Crew', array(
+                'criteria' => $criteria,
+            ));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
