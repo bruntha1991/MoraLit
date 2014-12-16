@@ -38,6 +38,8 @@ class SiteController extends Controller {
         if(isset($_POST['Item']))
         {
             $model->attributes=$_POST['Item'];
+            echo 'ssssssssssssssssssssss';
+            echo $model->attributes;
             $model->image=CUploadedFile::getInstance($model,'image');
 //            if($model->save())
 //            {
@@ -51,6 +53,57 @@ class SiteController extends Controller {
             if($model->validate()) {
                 //The image is valid, you can save it
                 $path = 'assets/img/home_slider/'.'slide-1'.'.'.$extension;
+                $model->image->saveAs($path);
+            }
+        }
+        $this->render('index', array('model'=>$model));
+    }
+    
+    public function actionSlide_1()
+    {
+        $model=new Item;
+        if(isset($_POST['Item']))
+        {
+            $model->attributes=$_POST['Item'];
+            $model->image=CUploadedFile::getInstance($model,'image');
+//            if($model->save())
+//            {
+//                $model->image->saveAs('path/to/localFile');
+//                // redirect to success page
+//            }
+            
+            $extension=$model->image->getExtensionName();
+//            $slideNo=$model->getImageNo();
+            echo "df";
+            if($model->validate()) {
+                //The image is valid, you can save it
+                $path = 'assets/img/home_slider/'.'slide-1'.'.'.$extension;
+                $model->image->saveAs($path);
+            }
+        }
+        $this->render('index', array('model'=>$model));
+    }
+    
+    public function actionSlide_2()
+    {
+        $model=new Item;
+//        if(isset($_POST['Item']))
+        {
+            $model->attributes=$_POST['Item'];
+            
+            $model->image=CUploadedFile::getInstance($model,'image');
+//            if($model->save())
+//            {
+//                $model->image->saveAs('path/to/localFile');
+//                // redirect to success page
+//            }
+            
+            $extension=$model->image->getExtensionName();
+//            $slideNo=$model->getImageNo();
+            echo "df";
+            if($model->validate()) {
+                //The image is valid, you can save it
+                $path = 'assets/img/home_slider/'.'slide-2'.'.'.$extension;
                 $model->image->saveAs($path);
             }
         }

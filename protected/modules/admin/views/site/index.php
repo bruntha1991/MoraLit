@@ -39,6 +39,42 @@
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
             </div><!-- /.carousel -->
 
+            <form action="?r=admin/site/slide_2">
+                
+                 <?php
+            /*
+             * To change this template, choose Tools | Templates
+             * and open the template in the editor.
+             */
+//            'htmlOptions' => array("data-ajax"=>"false");
+
+
+            
+            $form = $this->beginWidget(
+                    'CActiveForm', array(
+                'id' => 'upload-form',
+//                'imageNo'=>'slide',     
+                'enableAjaxValidation' => false,
+                'htmlOptions' => array('enctype' => 'multipart/form-data','imageNo'=>"slide-1"),
+                        
+//                        'htmlOptions' => array("data-ajax"=>"false"),
+//    'focus'=>array($model,'username'),
+                    )
+            );
+            $model->imageNo="slide-2";
+// ...
+            echo $form->labelEx($model, 'slide-2');
+            echo $form->fileField($model, 'image');
+            echo $form->error($model, 'image');
+            
+// ...  
+            
+            echo CHtml::submitButton('Submit');
+            $this->endWidget();
+            ?>
+                
+                
+            </form>
             <?php
             /*
              * To change this template, choose Tools | Templates
