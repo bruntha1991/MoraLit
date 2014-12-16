@@ -25,7 +25,7 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-
+<div style="position: absolute; top:65px">
 <h1>Manage Blogs</h1>
 
 <p>
@@ -34,12 +34,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </p>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
+<div class="search-form" style="display:none; position: relative; left: 30px">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
 
+<div style="width: 960px">
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'blog-grid',
 	'dataProvider'=>$model->search(),
@@ -60,3 +61,5 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 )); ?>
+</div>
+</div>

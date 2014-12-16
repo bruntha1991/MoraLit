@@ -70,8 +70,13 @@ class BlogController extends Controller
 		if(isset($_POST['Blog']))
 		{
 			$model->attributes=$_POST['Blog'];
+                        $model->no_of_views=0;
+                        $model->date=date("Y/m/d");
+                        $model->time=date("h:i:sa");
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->blog_id));
+                
+                
 		}
 
 		$this->render('create',array(

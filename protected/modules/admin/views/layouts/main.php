@@ -46,9 +46,6 @@
             ),
         ));
         ?>
-
-
-
         <?php //if(isset($this->breadcrumbs)):?>
         <?php
         //$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
@@ -69,37 +66,37 @@
 
         if ($route != 'default') {
             ?>
-            <div class="span3"><br/><br/><br/><br/>
+            <div class="span3"><br/>
                 <div class="well sidebar-nav">
                     <ul class="nav nav-list">
 
 
-                        <li <?php echo ($route == 'course') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Crew Management', array('course/index')) ?>
+                        <li <?php echo ($route == 'crew') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Crew Management', array('crew/index')) ?>
                         </li>
 
-                        <li <?php echo ($route == 'level') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Blog Management', array('level/index')) ?>
+                        <li <?php echo ($route == 'blog') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Blog Management', array('blog/index')) ?>
                         </li>
 
-                        <li <?php echo ($route == 'subject') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('User Management', array('subject/index')) ?>
+                        <li <?php echo ($route == 'user') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('User Management', array('user/index')) ?>
                         </li>
 
-                        <li <?php echo ($route == 'subjectArea') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Comments Management', array('subjectArea/index')) ?>
+                        <li <?php echo ($route == 'comment') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Comments Management', array('comment/index')) ?>
                         </li>
 
-                        <li <?php echo ($route == 'sitting') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Galary Management', array('sitting/index')) ?>
+                        <li <?php echo ($route == 'photo') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Galary Management', array('photo/index')) ?>
                         </li>
 
-                        <li <?php echo ($route == 'news') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Event Management', array('news/index')) ?>
+                        <li <?php echo ($route == 'event') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Event Management', array('event/index')) ?>
                         </li>
 
-                        <li <?php echo ($route == 'country') ? 'class="active"' : '' ?>>
-                            <?php echo CHtml::link('Sub-Event Management', array('country/index')) ?>
+                        <li <?php echo ($route == 'subEvent') ? 'class="active"' : '' ?>>
+                            <?php echo CHtml::link('Sub-Event Management', array('subEvent/index')) ?>
                         </li>
 
 
