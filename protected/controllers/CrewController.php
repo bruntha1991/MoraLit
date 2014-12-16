@@ -128,7 +128,18 @@ class CrewController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Crew');
+		$year= 2015;
+            $criteria = new CDbCriteria(array('condition'=>"year = '$year'"));
+            //$criteria->group = 'designation';
+            $mysort = array('President','Vice-President','Secretary','Vice-Secretary','Treasurer','Editor','Web-Coordinator','Representative');
+            
+            /*$criteria->select='*';
+            $criteria->condition='year = year';
+            $criteria->params = array(':year'=>"2015");*/
+            
+            $dataProvider=new CActiveDataProvider('Crew', array(
+                'criteria' => $criteria,
+            ));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

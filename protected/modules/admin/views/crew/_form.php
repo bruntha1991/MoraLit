@@ -56,9 +56,14 @@
                </div>
                
                <div class="control-group">
+                   <div class="control-label">
+                        <?php echo $form->labelEx($model,'email'); ?>
+                   </div>
+                   <div class="controls">
                    <?php echo $form->emailField($model,'email'); ?>
+                   </div>
                </div>
-               
+
                <div class="control-group">
                    <?php echo CHtml::activeFileField($model, 'image'); ?>
                </div>
