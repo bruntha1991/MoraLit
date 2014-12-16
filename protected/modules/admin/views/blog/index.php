@@ -1,3 +1,5 @@
+<h1>Blogs</h1>
+
 <?php
 /* @var $this BlogController */
 /* @var $dataProvider CActiveDataProvider */
@@ -12,7 +14,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Blogs</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

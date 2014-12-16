@@ -51,6 +51,10 @@ class BlogController extends Controller
 	 */
 	public function actionView($id)
 	{
+            $model=$this->loadModel($id);
+            $model->no_of_views+=1;
+            $model->save();
+            
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));

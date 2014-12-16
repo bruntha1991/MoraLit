@@ -31,7 +31,7 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('image')); ?>:</b>
 	<?php echo CHtml::encode($data->image); ?>
-	<br />
+	<br /><br />
 
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('no_of_views')); ?>:</b>

@@ -18,12 +18,12 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 ?>
 
 
-<div class="span1"></div>
-<div class="span11">
-    <h3 class="master_heading">Create your News</h3>
+
+<div class="span9">
+    <h3 class="master_heading">Create New Blog</h3>
     <div class="well">
         <div class="control-group">
-            <?php echo $form->labelEx($model, 'title', array('class' => 'col-sm-2 control-label')); ?>
+            <?php echo $form->labelEx($model, 'title', array('class' => 'col-sm- control-label')); ?>
             <?php echo $form->textField($model, 'title', array('size' => 60, 'maxlength' => 100)); ?>
             <?php echo $form->error($model, 'title'); ?>
         </div>
@@ -36,12 +36,11 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
         <!--        <div class="control-group">
         <?php echo $form->labelEx($model, 'content', array('class' => 'col-sm-2 control-label')); ?>
-        <?php echo $form->textArea($model, 'content', array('rows' => 6, 'cols' => 50)); ?>
+        <?php echo $form->textArea($model, 'content', array('rows' => 6, 'cols' => 40)); ?>
         <?php echo $form->error($model, 'content'); ?>
                 </div>-->
 
-        <div class="control-group">
-            <?php echo $form->textAreaRow($model, 'content', array('rows' => 15, 'cols' => 50, 'class' => 'span8')); ?>
+        <?php echo $form->textAreaRow($model, 'content', array('rows' => 15, 'cols' => 50, 'class' => 'span5')); ?>
 
             <div class="control-group">
                 <input type="hidden" id="update_ff" name="update_ff" value="CREATE" />
@@ -55,30 +54,11 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                     <?php //$this->renderpartial('_single_answers');   ?>
                 </div>
             </div>
-        </div>
-
-        <div class="control-group">
-            <?php echo $form->labelEx($model, 'date', array('class' => 'col-sm-2 control-label')); ?>
-            <?php echo $form->textField($model, 'date'); ?>
-            <?php echo $form->error($model, 'date'); ?>
-        </div>
-
-        <div class="control-group">
-            <?php echo $form->labelEx($model, 'time', array('class' => 'col-sm-2 control-label')); ?>
-            <?php echo $form->textField($model, 'time'); ?>
-            <?php echo $form->error($model, 'time'); ?>
-        </div>
 
         <div class="control-group">
             <?php echo $form->labelEx($model, 'image', array('class' => 'col-sm-2 control-label')); ?>
             <?php echo $form->textField($model, 'image', array('size' => 45, 'maxlength' => 45)); ?>
             <?php echo $form->error($model, 'image'); ?>
-        </div>
-
-        <div class="control-group">
-            <?php echo $form->labelEx($model, 'no_of_views', array('class' => 'col-sm-2 control-label')); ?>
-            <?php echo $form->textField($model, 'no_of_views', array('size' => 10, 'maxlength' => 10)); ?>
-            <?php echo $form->error($model, 'no_of_views'); ?>
         </div>
 
         <div class="control-group">
@@ -100,7 +80,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     tinymce.init({
         selector: "textarea",
         theme: "modern",
-        width: 1000,
+        width: 800,
         height: 300,
         plugins: [
             "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
