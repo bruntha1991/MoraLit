@@ -19,7 +19,7 @@
           </div>	
 </div>
 
-    <div class="span9">
+    <div class="span9" style="position: absolute; top:80px; left: 300px">
 <!--        <div id="content">-->
 		<?php echo $content; ?>
 	<!--</div> content -->

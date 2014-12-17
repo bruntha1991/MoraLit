@@ -25,27 +25,15 @@
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'date'); ?>
-		<?php echo $form->textField($model,'date'); ?>
-		<?php echo $form->error($model,'date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'time'); ?>
-		<?php echo $form->textField($model,'time'); ?>
-		<?php echo $form->error($model,'time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'image'); ?>
-		<?php echo $form->textField($model,'image',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'image'); ?>
-	</div>
+	<div class="control-group">
+            <?php echo $form->labelEx($model, 'image', array('class' => 'col-sm-2 control-label')); ?>
+            <?php echo $form->fileField($model, 'image',array('size' => 20)); ?>
+            <?php echo $form->error($model, 'image'); ?>
+        </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'description',array('rows'=>15, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
 

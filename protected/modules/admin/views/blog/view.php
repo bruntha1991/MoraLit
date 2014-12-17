@@ -17,7 +17,12 @@ $this->menu=array(
 ?>
 
 <h1>View Blog #<?php echo $model->blog_id; ?></h1>
-
+<div rowspan="5" style="width: 100px">
+    <?php
+        $imghtml= CHtml::image("assets/blog/".$model->image);
+        echo CHtml::link($imghtml, array('view', 'id'=>$model->blog_id));
+    ?> 
+</div>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
@@ -27,7 +32,6 @@ $this->menu=array(
 		'content',
 		'date',
 		'time',
-		'image',
 		'no_of_views',
 	),
 )); ?>

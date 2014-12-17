@@ -61,7 +61,7 @@ return array(
             'connectionString' => 'mysql:host=localhost;dbname=moralit',
             'emulatePrepare' => true,
             'username' => 'root',
-            'password' => '',
+            'password' => '123',
             'charset' => 'utf8',
         ),
         'errorHandler' => array(
