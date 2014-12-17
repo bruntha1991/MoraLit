@@ -1,6 +1,10 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/slick.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.totemticker.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.0.0/bootbox.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.ticker.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/site.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/ticker-style.css" />
+
 <?php $this->pageTitle = Yii::app()->name; ?>
 <div class="container">
     <div class="row"> 
@@ -41,6 +45,33 @@
         </div>
     </div>
 
+
+    <div class="span2">
+    <div class="span9">
+        <ul id="js-news" class="js-hidden">  
+   <?php $msgs = Blog::model()->getBroadcastNews(); ?>
+               <?php
+                    foreach ($msgs as $msg) {
+                        ?>
+                        <li class="news-item"><?php echo Blog::model()->TruncateText($msg['content'], 80); ?>
+                            &nbsp;
+                            <?php
+                            if (strlen($msg['content']) > 75) {
+
+                                echo CHtml::link('Read more', array('site/ViewBroadcastNews',
+                                    'blog_id' => $msg['blog_id'],
+                                        // 'levelid' => $levelid,
+                                        // 'messageid' => $msgs['messageid'][$msg],
+                                        ), array('id' => 'readmore'));
+                            }
+                            ?>
+                        </li>
+                        <?php
+                    }
+                    ?>
+        </ul>
+    </div>
+    </div>
 </div>
 
 <!--    /container -->
@@ -64,3 +95,15 @@
     }); //ready
 
 </script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#js-news').ticker({
+            speed: 0.10,
+            htmlFeed: false,
+            fadeInSpeed: 800,
+            titleText: 'Latest News'
+        });
+    });
+</script>
+
