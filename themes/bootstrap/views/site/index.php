@@ -47,30 +47,33 @@
 
 
     <div class="span2">
-    <div class="span9">
-        <ul id="js-news" class="js-hidden">  
-   <?php $msgs = Blog::model()->getBroadcastNews(); ?>
-               <?php
-                    foreach ($msgs as $msg) {
-                        ?>
-                        <li class="news-item"><?php echo Blog::model()->TruncateText($msg['content'], 80); ?>
-                            &nbsp;
-                            <?php
-                            if (strlen($msg['content']) > 75) {
+        <div class="span9">
 
-                                echo CHtml::link('Read more', array('site/ViewBroadcastNews',
-                                    'blog_id' => $msg['blog_id'],
-                                        // 'levelid' => $levelid,
-                                        // 'messageid' => $msgs['messageid'][$msg],
-                                        ), array('id' => 'readmore'));
-                            }
-                            ?>
-                        </li>
-                        <?php
-                    }
+            <?php $msgs = Blog::model()->getBroadcastNews(); ?>
+            <ul id="js-news" class="js-hidden"> 
+
+                <?php
+                foreach ($msgs as $msg) {
                     ?>
-        </ul>
-    </div>
+
+                    <li class="news-item"><?php echo Blog::model()->TruncateText($msg['content'], 50); ?>
+                        &nbsp;
+
+                        <?php
+                        if (strlen($msg['content']) > 40) {
+                            echo CHtml::link('Read more', array('blog/view',
+                                'id' => $msg['blog_id'],
+                                    ), array('blog_id' => 'readmore'));
+                        }
+                        ?>
+                    </li>
+
+                    <?php
+                }
+                ?>
+            </ul>
+
+        </div>
     </div>
 </div>
 
@@ -97,13 +100,25 @@
 </script>
 
 <script type="text/javascript">
+
     $(function () {
-        $('#js-news').ticker({
-            speed: 0.10,
-            htmlFeed: false,
-            fadeInSpeed: 800,
-            titleText: 'Latest News'
-        });
+        $('#js-news').ticker(
+                speed: 0.10, // The speed of the reveal
+                ajaxFeed: false, // Populate jQuery News Ticker via a feed
+                feedUrl: false, // The URL of the feed
+                // MUST BE ON THE SAME DOMAIN AS THE TICKER
+                feedType: 'xml', // Currently only XML
+                htmlFeed: true, // Populate jQuery News Ticker via HTML
+                debugMode: true, // Show some helpful errors in the console or as alerts
+                // SHOULD BE SET TO FALSE FOR PRODUCTION SITES!
+                controls: true, // Whether or not to show the jQuery News Ticker controls
+                titleText: 'Latest', // To remove the title set this to an empty String
+                displayType: 'reveal', // Animation type - current options are 'reveal' or 'fade'
+                direction: 'ltr'       // Ticker direction - current options are 'ltr' or 'rtl'
+        pauseOnItems: 2000, // The pause on a news item before being replaced
+                fadeInSpeed: 600, // Speed of fade in animation
+                fadeOutSpeed: 300      // Speed of fade out animation
+                );
     });
 </script>
 
