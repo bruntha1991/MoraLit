@@ -19,7 +19,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 
 
-<div class="span9">
+<div class="span9" style="position: relative; left:-30px; top:10px">
     <h3 class="master_heading">Create New Blog</h3>
     <div class="well">
         <div class="control-group">
@@ -57,7 +57,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
         <div class="control-group">
             <?php echo $form->labelEx($model, 'image', array('class' => 'col-sm-2 control-label')); ?>
-            <?php echo $form->textField($model, 'image', array('size' => 45, 'maxlength' => 45)); ?>
+            <?php echo $form->fileField($model, 'image',array('size' => 20)); ?>
             <?php echo $form->error($model, 'image'); ?>
         </div>
 

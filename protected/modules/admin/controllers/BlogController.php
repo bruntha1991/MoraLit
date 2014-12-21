@@ -73,9 +73,14 @@ class BlogController extends Controller
                         $model->no_of_views=0;
                         $model->date=date("Y/m/d");
                         $model->time=date("h:i:sa");
+                        $uploadedFile = CUploadedFile::getInstance($model, 'image');
+                        $fileName = $uploadedFile;
+                        $model->image = $fileName;
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->blog_id));
-                
+                        {
+                                $uploadedFile->saveAs("assets/blog/" . $uploadedFile->name);
+                        	$this->redirect(array('view','id'=>$model->blog_id));
+                        }
                 
 		}
 
@@ -99,8 +104,14 @@ class BlogController extends Controller
 		if(isset($_POST['Blog']))
 		{
 			$model->attributes=$_POST['Blog'];
+                        $uploadedFile = CUploadedFile::getInstance($model, 'image');
+                        $fileName = $uploadedFile;
+                        $model->image = $fileName;
 			if($model->save())
+                        {
+                                $uploadedFile->saveAs("assets/blog/" . $uploadedFile->name);
 				$this->redirect(array('view','id'=>$model->blog_id));
+                        }
 		}
 
 		$this->render('update',array(
