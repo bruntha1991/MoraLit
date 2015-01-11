@@ -15,22 +15,22 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="assets/img/slide-1.jpg" alt="First slide">
+                        <img src="assets/img/home_slider/slide-1.jpg" alt="First slide">
                         <div class="container">
                         </div>
                     </div>
                     <div class="item">
-                        <img src="assets/img/slide-2.jpg" alt="First slide">
+                        <img src="assets/img/home_slider/slide-2.jpg" alt="First slide">
                         <div class="container">
                         </div>
                     </div>
                     <div class="item">
-                        <img src="assets/img/slide-3.jpg" alt="First slide">
+                        <img src="assets/img/home_slider/slide-3.jpg" alt="First slide">
                         <div class="container">
                         </div>
                     </div>
                     <div class="item">
-                        <img src="assets/img/slide-4.jpg" alt="First slide">
+                        <img src="assets/img/home_slider/slide-4.jpg" alt="First slide">
                         <div class="container">
                         </div>
                     </div>
