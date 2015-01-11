@@ -39,74 +39,27 @@
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
             </div><!-- /.carousel -->
 
-            <form action="?r=admin/site/slide_2">
-                
-                 <?php
-            /*
-             * To change this template, choose Tools | Templates
-             * and open the template in the editor.
-             */
-//            'htmlOptions' => array("data-ajax"=>"false");
 
 
-            
-            $form = $this->beginWidget(
-                    'CActiveForm', array(
-                'id' => 'upload-form',
-//                'imageNo'=>'slide',     
-                'enableAjaxValidation' => false,
-                'htmlOptions' => array('enctype' => 'multipart/form-data','imageNo'=>"slide-1"),
-                        
-//                        'htmlOptions' => array("data-ajax"=>"false"),
-//    'focus'=>array($model,'username'),
-                    )
-            );
-            $model->imageNo="slide-2";
-// ...
-            echo $form->labelEx($model, 'slide-2');
-            echo $form->fileField($model, 'image');
-            echo $form->error($model, 'image');
-            
-// ...  
-            
-            echo CHtml::submitButton('Submit');
-            $this->endWidget();
-            ?>
-                
-                
+        </div>
+
+
+        <div>
+            <form action="?r=admin/site/addslides" method="post" enctype="multipart/form-data">
+                Select Slide:
+                <select name="slide">
+                    <option value="slide-1">Slide-01</option>
+                    <option value="slide-2">Slide-02</option>
+                    <option value="slide-3">Slide-03</option>
+                    <option value="slide-4">Slide-04</option>
+                </select>
+                <br>
+                Select image to upload:
+
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <br>
+                <input type="submit" value="Upload Image" name="submit">
             </form>
-            <?php
-            /*
-             * To change this template, choose Tools | Templates
-             * and open the template in the editor.
-             */
-//            'htmlOptions' => array("data-ajax"=>"false");
-
-
-            
-            $form = $this->beginWidget(
-                    'CActiveForm', array(
-                'id' => 'upload-form',
-//                'imageNo'=>'slide',     
-                'enableAjaxValidation' => false,
-                'htmlOptions' => array('enctype' => 'multipart/form-data','imageNo'=>"slide-1"),
-                        
-//                        'htmlOptions' => array("data-ajax"=>"false"),
-//    'focus'=>array($model,'username'),
-                    )
-            );
-            $model->imageNo="slide-1";
-// ...
-            echo $form->labelEx($model, 'slide-1');
-            echo $form->fileField($model, 'image');
-            echo $form->error($model, 'image');
-            
-// ...  
-            
-            echo CHtml::submitButton('Submit');
-            $this->endWidget();
-            ?>
-
         </div>
     </div>
 
@@ -118,7 +71,7 @@
 <!--    /container -->
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         //alert("The paragraph was clicked.");
         $('.vertical-ticker').totemticker({

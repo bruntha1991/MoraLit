@@ -3159,3 +3159,114 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/moralit/index.php?r=crew/form
 ---
+2015/01/11 08:28:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addslide1".' in /var/www/html/MoraLit/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(270): CController->missingAction('addslide1')
+#1 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): CController->run('addslide1')
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('site/addslide1')
+#3 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/MoraLit/index.php?r=site/addslide1
+HTTP_REFERER=http://localhost/MoraLit/index.php?r=admin/site
+---
+2015/01/11 08:31:09 [error] [php] getimagesize(): Filename cannot be empty (/var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php:42)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=admin/site/addslide1
+in /var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php (42)
+in /var/www/html/MoraLit/index.php (13)
+2015/01/11 08:42:18 [error] [php] move_uploaded_file(uploads/1459054_1028809987146092_2864392129799432647_n.jpg): failed to open stream: No such file or directory (/var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php:71)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=admin/site/addslide1
+in /var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php (71)
+in /var/www/html/MoraLit/index.php (13)
+2015/01/11 08:53:17 [error] [php] basename() expects parameter 1 to be string, array given (/var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php:176)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=admin/site/addslide1
+in /var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php (176)
+in /var/www/html/MoraLit/index.php (13)
+2015/01/11 08:56:54 [error] [php] basename() expects parameter 1 to be string, array given (/var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php:176)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=admin/site/addslide1
+in /var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php (176)
+in /var/www/html/MoraLit/index.php (13)
+2015/01/11 16:04:28 [error] [php] Use of undefined constant jpg - assumed 'jpg' (/var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php:177)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=admin/site/addslides
+in /var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php (177)
+in /var/www/html/MoraLit/index.php (13)
+2015/01/11 16:04:54 [error] [php] Undefined variable: model (/var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php:229)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=admin/site/addslides
+in /var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php (229)
+in /var/www/html/MoraLit/index.php (13)
+2015/01/11 16:05:55 [error] [php] Undefined index: fileToUpload (/var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php:176)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=admin/site/addslides
+in /var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php (176)
+in /var/www/html/MoraLit/index.php (13)
+2015/01/11 16:07:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/site\".' in /var/www/html/MoraLit/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/site\\')
+#1 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/MoraLit/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/MoraLit/index.php?r=admin/site\
+---
+2015/01/11 16:10:03 [error] [php] Use of undefined constant site - assumed 'site' (/var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php:217)
+Stack trace:
+#0 /var/www/html/MoraLit/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/MoraLit/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/MoraLit/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/MoraLit/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/MoraLit/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/MoraLit/index.php(13): CWebApplication->run()
+REQUEST_URI=/MoraLit/index.php?r=admin/site/addslides
+in /var/www/html/MoraLit/protected/modules/admin/controllers/SiteController.php (217)
+in /var/www/html/MoraLit/index.php (13)

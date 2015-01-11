@@ -1,8 +1,8 @@
 <?php
 
 class SiteController extends Controller {
-    
-        public $layout = '/layouts/siteLayout';
+
+    public $layout = '/layouts/siteLayout';
 
     /**
      * Declares class-based actions.
@@ -31,83 +31,266 @@ class SiteController extends Controller {
 //        // using the default layout 'protected/views/layouts/main.php'
 //        $this->render('index');
 //    }
-    
-    public function actionIndex()
-    {
-        $model=new Item;
-        if(isset($_POST['Item']))
-        {
-            $model->attributes=$_POST['Item'];
+    public function actionAddSlide4() {
+        echo "ff";
+
+        $target_dir = 'assets/img/home_slider/';
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+// Check if image file is a actual image or fake image
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+// Check if file already exists
+        if (file_exists($target_file)) {
+            echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+// Check file size
+        if ($_FILES["fileToUpload"]["size"] > 500000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+// Allow certain file formats
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+// Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+    }
+
+    public function actionAddSlide3() {
+        echo "ff";
+
+        $target_dir = 'assets/img/home_slider/';
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+// Check if image file is a actual image or fake image
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+// Check if file already exists
+        if (file_exists($target_file)) {
+            echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+// Check file size
+        if ($_FILES["fileToUpload"]["size"] > 500000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+// Allow certain file formats
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+// Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+    }
+
+    public function actionAddSlide2() {
+        echo "ff";
+
+        $target_dir = 'assets/img/home_slider/';
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+// Check if image file is a actual image or fake image
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+// Check if file already exists
+        if (file_exists($target_file)) {
+            echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+// Check file size
+        if ($_FILES["fileToUpload"]["size"] > 500000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+// Allow certain file formats
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+// Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+    }
+
+    public function actionAddSlides() {
+        $target_dir = 'assets/img/home_slider/';
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $target_file_new = $target_dir . $_POST['slide'] . ".jpg";
+        $response='';
+//        $_FILES.getElementById("myFile").name = "newFileName";
+
+        $uploadOk = 1;
+        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+// Check if image file is a actual image or fake image
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+            if ($check !== false) {
+                $response="File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                $response= "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+// Check if file already exists
+//        if (file_exists($target_file)) {
+//            echo "Sorry, file already exists.";
+//            $uploadOk = 0;
+//        }
+// Check file size
+        if ($_FILES["fileToUpload"]["size"] > 500000) {
+            $response= "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+// Allow certain file formats
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+            $response= "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+// Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            $response= "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file_new)) {
+                $response= "The file has been uploaded successfully.";
+            } else {
+                $response= "Sorry, there was an error uploading your file.";
+            }
+        }
+        $this->redirect(array('site/index'));
+
+//        $this->redirect('?r=admin/site/index',array('response'=>$response));
+    }
+
+    public function actionIndex() {
+        $model = new Item;
+        if (isset($_POST['Item'])) {
+            $model->attributes = $_POST['Item'];
             echo 'ssssssssssssssssssssss';
             echo $model->attributes;
-            $model->image=CUploadedFile::getInstance($model,'image');
+            $model->image = CUploadedFile::getInstance($model, 'image');
 //            if($model->save())
 //            {
 //                $model->image->saveAs('path/to/localFile');
 //                // redirect to success page
 //            }
-            
-            $extension=$model->image->getExtensionName();
+
+            $extension = $model->image->getExtensionName();
 //            $slideNo=$model->getImageNo();
             echo "df";
-            if($model->validate()) {
+            if ($model->validate()) {
                 //The image is valid, you can save it
-                $path = 'assets/img/home_slider/'.'slide-1'.'.'.$extension;
+                $path = 'assets/img/home_slider/' . 'slide-1' . '.' . $extension;
                 $model->image->saveAs($path);
             }
         }
-        $this->render('index', array('model'=>$model));
+        $this->render('index', array('model' => $model));
     }
-    
-    public function actionSlide_1()
-    {
-        $model=new Item;
-        if(isset($_POST['Item']))
-        {
-            $model->attributes=$_POST['Item'];
-            $model->image=CUploadedFile::getInstance($model,'image');
+
+    public function actionSlide_1() {
+        $model = new Item;
+        if (isset($_POST['Item'])) {
+            $model->attributes = $_POST['Item'];
+            $model->image = CUploadedFile::getInstance($model, 'image');
 //            if($model->save())
 //            {
 //                $model->image->saveAs('path/to/localFile');
 //                // redirect to success page
 //            }
-            
-            $extension=$model->image->getExtensionName();
+
+            $extension = $model->image->getExtensionName();
 //            $slideNo=$model->getImageNo();
             echo "df";
-            if($model->validate()) {
+            if ($model->validate()) {
                 //The image is valid, you can save it
-                $path = 'assets/img/home_slider/'.'slide-1'.'.'.$extension;
+                $path = 'assets/img/home_slider/' . 'slide-1' . '.' . $extension;
                 $model->image->saveAs($path);
             }
         }
-        $this->render('index', array('model'=>$model));
+        $this->render('index', array('model' => $model));
     }
-    
-    public function actionSlide_2()
-    {
-        $model=new Item;
+
+    public function actionSlide_2() {
+        $model = new Item;
 //        if(isset($_POST['Item']))
         {
-            $model->attributes=$_POST['Item'];
-            
-            $model->image=CUploadedFile::getInstance($model,'image');
+            $model->attributes = $_POST['Item'];
+
+            $model->image = CUploadedFile::getInstance($model, 'image');
 //            if($model->save())
 //            {
 //                $model->image->saveAs('path/to/localFile');
 //                // redirect to success page
 //            }
-            
-            $extension=$model->image->getExtensionName();
+
+            $extension = $model->image->getExtensionName();
 //            $slideNo=$model->getImageNo();
             echo "df";
-            if($model->validate()) {
+            if ($model->validate()) {
                 //The image is valid, you can save it
-                $path = 'assets/img/home_slider/'.'slide-2'.'.'.$extension;
+                $path = 'assets/img/home_slider/' . 'slide-2' . '.' . $extension;
                 $model->image->saveAs($path);
             }
         }
-        $this->render('index', array('model'=>$model));
+        $this->render('index', array('model' => $model));
     }
 
     public function actionAboutuUs() {
@@ -154,28 +337,28 @@ class SiteController extends Controller {
      */
     public function actionLogin() {
         $model = new LoginForm;
-        
-        
-        
+
+
+
         // if it is ajax validation request
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
-        }   
+        }
 
         // collect user input data
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
             // validate user input and redirect to the previous page if valid
             if ($model->validate() && $model->login()) {
-                $type=User::model()->getType();
+                $type = User::model()->getType();
                 echo $type;
-                
+
                 if (Yii::app()->user->isGuest) {
                     $this->render('index');
                 } else if (User::model()->getType() == 'admin') {
-                     $this->redirect(array('/admin'));
-                } 
+                    $this->redirect(array('/admin'));
+                }
             }
         }
         // display the login form 
